@@ -50,7 +50,7 @@ this seems to boil down to the boring protocol:
 
 *T* → *B* : {*C*}<sub>*P**r**i**v**K**A*</sub>
 
-### Being Optimistic
+### Optimistic FX
 
 Does not require a referee, unless there is a conflict. If possible this
 is what we should do.
