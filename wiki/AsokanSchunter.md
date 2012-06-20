@@ -24,21 +24,33 @@ With a Trusted Third Party (TTP)
 --------------------------------
 
 Requires a referee. In the setting of SXP, maybe the market could maybe
-play such a role. The protocols that do that have a common pattern. As
-usual Alice (A) and Bob (B) are the normal parties, and Trent (T) is the
-Trusted Third Party. They seek to exchange M\_A and M\_B. Moreover see
+play such a role, but this is costly.
+
+The protocols that implement this have a simple common pattern. Alice
+(A) and Bob (B) need to sign contract (C) with there private keys
+PrivKA/PrivKB, Trent (T) is the Trusted Third Party. See
 [here](http://en.wikipedia.org/wiki/Security_protocol_notation) for the
 notation.
 
-*A* → *B* : {*M*<sub>*A*</sub>}<sub>*K*</sub>
+*A* → *B* : {{*C*}<sub>*P**r**i**v**K**A*</sub>}<sub>*K*</sub>
 
 *A* → *T* : *K*
 
-*B* → *T* : *M*<sub>*B*</sub>
+*B* → *T* : {{*C*}<sub>*P**r**i**v**K**A*</sub>}<sub>*K*</sub>, {*C*}<sub>*P**r**i**v**K**B*</sub> : &lt;*m**a**t**h* &gt; *T* → *B* : *K*
 
-*T* → *B* : *K*
+*T* → *A* : {*C*}<sub>*P**r**i**v**K**B*</sub>
 
-*T* → *B* : *K*
+To be honest I am not sure why going through K is necessary, this looks
+like an optimization for Digital Certified Mail. In the explanations all
+this seems to be a variation of the boring protocol:
+
+*A* → *T* : {*C*}<sub>*P**r**i**v**K**A*</sub>
+
+*B* → *T* : {*C*}<sub>*P**r**i**v**K**B*</sub>
+
+*T* → *A* : {*C*}<sub>*P**r**i**v**K**B*</sub>
+
+*T* → *B* : {*C*}<sub>*P**r**i**v**K**A*</sub>
 
 Being Optimistic
 ----------------
