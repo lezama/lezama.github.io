@@ -87,7 +87,9 @@ Let us call this magic thing VE\_A.
 The protocol would then run as follows:
 
 *A* → *B* : *V**E*<sub>*A*</sub>
+
 *B* → *A* : {*C*}<sub>*P**r**i**v**K**B*</sub>
+
 *A* → *B* : {*C*}<sub>*P**r**i**v**K**A*</sub>
 
 If Alice disappears after step one, no worries, there is a recovery
@@ -97,7 +99,9 @@ brings the contract signed by him, so that the TTP takes it and gives it
 to Alice when she wakes up. More precisely the recovery protocol is:
 
 *B* → *T* : {*C*}<sub>*P**r**i**v**K**B*</sub>, *V**E*<sub>*A*</sub>
+
 *T* → *B* : {*C*}<sub>*P**r**i**v**K**A*</sub>
+
 *T* → *A* : {*C*}<sub>*P**r**i**v**K**B*</sub>
 
 This sounds great. Apparently these VE\_A exist, they are called
