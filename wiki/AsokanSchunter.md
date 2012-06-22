@@ -117,8 +117,12 @@ Solving this without time-limits is called the asynchronous model. The
 authors explain that the following minor modification is secure and
 minimal for the asynchronous model:
 
-*A* → *B* : *V**E*<sub>*A*</sub> *B* → *A* : *V**E*<sub>*B*</sub>
+*A* → *B* : *V**E*<sub>*A*</sub>
+
+*B* → *A* : *V**E*<sub>*B*</sub>
+
 *A* → *B* : {*C*}<sub>*P**r**i**v**K**A*</sub>
+
 *B* → *A* : {*C*}<sub>*P**r**i**v**K**B*</sub>
 
 To summarize main idea is that now Alice is allowed to contact the TTP
