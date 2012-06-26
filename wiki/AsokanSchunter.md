@@ -29,7 +29,9 @@ notation.
 
 *A* → *T* : *K*
 
-*B* → *T* : {{*C*}<sub>*P**r**i**v**K**A*</sub>}<sub>*K*</sub>, {*C*}<sub>*P**r**i**v**K**B*</sub> : &lt;*m**a**t**h* &gt; *T* → *B* : *K*
+*B* → *T* : {{*C*}<sub>*P**r**i**v**K**A*</sub>}<sub>*K*</sub>, {*C*}<sub>*P**r**i**v**K**B*</sub>
+
+*T* → *B* : *K*
 
 *T* → *A* : {*C*}<sub>*P**r**i**v**K**B*</sub>
 
