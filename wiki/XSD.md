@@ -17,9 +17,9 @@ at the root element. Here is an example of how this works on the
 SXPContract Schema:
 
 <?xml version="1.0"?>
-<contract xmlns="http://www.w3schools.com"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-'''xsi:schemaLocation'''="urn:oasis:names:tc:eContracts:1:0 SXPContract.xsd">
+`           `<contract xmlns="http://www.w3schools.com"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            '''xsi:schemaLocation'''="urn:oasis:names:tc:eContracts:1:0 SXPContract.xsd">
 
 This attribute has two values, separated by a space. The first value is
 the namespace to use, and it has to be the same as the one declared in
