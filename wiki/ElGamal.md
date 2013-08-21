@@ -1,0 +1,28 @@
+---
+title: ElGamal
+permalink: wiki/ElGamal/
+layout: wiki
+---
+
+Take p a prime and g an integer. The powers of g form a subgroup Gq
+(having q elements) inside the group Zp (having p elements), which is
+that of integers modulo p. The choice of these p and q is important so
+that they meet the [Decisional
+Diffie-Hellman](http://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption)
+assumption; but there are standard techniques for doing that. Thanks to
+that:
+
+  
+Bob generates
+*P**r**i**v**K**B* = *x*, *P**u**b**K**B* = *g*<sup>*x*</sup> and makes
+the latter public.
+
+Alice encrypts *m* ∈ *G*<sub>*q*</sub> as
+{*m*}<sub>*P**u**b**K**B*</sub> = (*y*<sup>*r*</sup>*m*, *g*<sup>*r*</sup>).
+
+Bob decrypts (*a*, *b*) as </math>a/b^x</math>.
+
+Indeed,
+*a*/*b*<sup>*x*</sup> = *y*<sup>*r*</sup>*m*/*g*<sup>*r**x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
+
+
