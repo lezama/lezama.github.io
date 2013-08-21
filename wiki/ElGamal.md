@@ -20,7 +20,7 @@ the latter public.
 Alice encrypts *m* ∈ *G*<sub>*q*</sub> as
 {*m*}<sub>*P**u**b**K**B*</sub> = (*y*<sup>*r*</sup>*m*, *g*<sup>*r*</sup>).
 
-Bob decrypts (*a*, *b*) as </math>a/b^x</math>.
+Bob decrypts (*a*, *b*) as *a*/*b*<sup>*x*</sup>.
 
 Indeed,
 *a*/*b*<sup>*x*</sup> = *y*<sup>*r*</sup>*m*/*g*<sup>*r**x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
