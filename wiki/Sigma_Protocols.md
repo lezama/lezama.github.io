@@ -54,9 +54,9 @@ The protocol has three rounds:
 
 *B* → *B* : *r* = *w**c* + *u*
  Alice validates Bob response by checking that
-*g*<sup>*r*</sup> = *a**h*<sup>*c*</sup>. Indeed,
+*g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
-*g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*u*</sup> = *h*<sup>*c*</sup>*a*.
+*g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*u*</sup> = *v*<sup>*c*</sup>*a*.
 
 Composability
 -------------
