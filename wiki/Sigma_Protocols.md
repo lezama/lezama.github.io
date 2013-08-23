@@ -29,8 +29,8 @@ valid. This explains what the last two rounds are for. The first round
 is there out of technical necessity: Bob chooses this *a* as a mask for
 passing the challenge without disclosing *w*.
 
-Example
--------
+Example: the Discrete Logarithm
+-------------------------------
 
 Here is an example based on Discrete Logarithms. Take *p* a prime and
 *g* an integer. The powers of *g* form a subgroup *G*<sub>*q*</sub>
@@ -43,8 +43,8 @@ assumption; but there are standard techniques for doing that.
 -   Public input *v* ∈ *G*<sub>*q*</sub>.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w*.
--   Bob will need some random *u* ∈ *Z*<sub>*p*</sub>, Alice will need
-    some random *c* ∈ *Z*<sub>*p*</sub>.
+-   Bob will need some random *u* ∈ *Z*<sub>*p*</sub>.
+-   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
 
 The protocol has three rounds:
 
@@ -57,4 +57,56 @@ The protocol has three rounds:
 *g*<sup>*r*</sup> = *a**h*<sup>*c*</sup>. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*u*</sup> = *h*<sup>*c*</sup>*a*.
+
+Composability
+-------------
+
+Consider *v*<sub>0</sub>, *v*<sub>1</sub> and
+*R*<sub>0</sub>, *R*<sub>1</sub>. Say Bob pretends to have
+*w*<sub>0</sub>, *w*<sub>1</sub> such that
+(*v*<sub>0</sub>, *w*<sub>0</sub>)∈*R*<sub>0</sub> ∧ (*v*<sub>1</sub>, *w*<sub>1</sub>)∈*R*<sub>1</sub>,
+and does not want to disclose them. Is there a Sigma protocol for this
+new relation
+*R*<sub>0</sub> ∧ *R*<sub>1</sub> = {(*v*<sub>0</sub>, *v*<sub>1</sub>),(*w*<sub>0</sub>, *w*<sub>1</sub>) | (*v*<sub>0</sub>, *w*<sub>0</sub>)∈*R*<sub>0</sub> ∧ (*v*<sub>1</sub>, *w*<sub>1</sub>)∈*R*<sub>1</sub>}?
+If there was some for *R*<sub>0</sub> and *R*<sub>1</sub>, then yes. It
+suffices to combine the parallel run of both protocols into one, as
+tuples.
+
+Now, say Bob pretends to have one of *w*<sub>0</sub> or *w*<sub>1</sub>,
+and does not want to disclose it, not tell which one it is. Is there a
+Sigma protocol for this new relation
+*R*<sub>0</sub> ∨ *R*<sub>1</sub> = {(*v*<sub>0</sub>, *v*<sub>1</sub>),(*w*<sub>0</sub>, *w*<sub>1</sub>) | (*v*<sub>0</sub>, *w*<sub>0</sub>)∈*R*<sub>0</sub> ∨ (*v*<sub>1</sub>, *w*<sub>1</sub>)∈*R*<sub>1</sub>}?
+If there was some for *R*<sub>0</sub> and *R*<sub>1</sub>, then
+sometimes yes. This sometimes is related to Bob's ability to simulate,
+on its own, a valid run of the component Sigma protocols. In other
+words, for instance say that Bob does not know *w*<sub>1</sub>, but that
+he has the freedom to choose himself the corresponding challenge
+*c*<sub>1</sub>. Is he able to efficiently generate
+*a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> so that they are
+valid? If so, then yes. This particular property of the component Sigma
+protocols is referred to as "existence of a simulator" or "special
+honest-verifier zero-knowledge". Here is how.
+
+-   Public input *v*<sub>0</sub>, *v*<sub>1</sub>.
+-   Agreed relation *R*<sub>0</sub> ∧ *R*<sub>1</sub>.
+-   Private input *w*<sub>0</sub>, say, but could equally be
+    *w*<sub>1</sub>.
+-   Bob will need some random
+    (*u*<sub>0</sub>, *a*<sub>0</sub>)∈*R*<sub>0</sub> and some run
+    *a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub>.
+-   Alice will need some random *s*.
+
+The protocol has three rounds:
+
+*B* → *A* : (*a*<sub>0</sub>, *a*<sub>1</sub>)
+
+*A* → *B* : *s*
+
+*B* → *B* : (*c*<sub>0</sub>, *c*<sub>1</sub>),(*r*<sub>0</sub>, *r*<sub>1</sub>)
+ where *r*<sub>0</sub> is computed by Bob thanks to his knowledge of
+*w*<sub>0</sub>. Alice validates Bob response by checking that:
+
+-   *s* = *c*<sub>0</sub> ⊕ *c*<sub>1</sub>
+-   *a*<sub>0</sub>, *c*<sub>0</sub>, *r*<sub>0</sub> is valid
+-   *a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> is valid
 
