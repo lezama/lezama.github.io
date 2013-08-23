@@ -110,3 +110,17 @@ The protocol has three rounds:
 -   *a*<sub>0</sub>, *c*<sub>0</sub>, *r*<sub>0</sub> is valid
 -   *a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> is valid
 
+The intuition is that Bob has "divided up" the random challenge *s* into
+*c*<sub>0</sub> which is random, and *c*<sub>1</sub>, which is chosen.
+He has passed the challenge *c*<sub>0</sub> thanks to his
+*w*<sub>0</sub>. He has passed the challenge *c*<sub>1</sub> because it
+was an easy challenge that he has himself chosen.
+
+In the case of the example of the Discrete Logarithm, there exists a
+simulator, so that this can be done. Indeed, to generate
+*a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> you:
+
+-   Pick *c*<sub>1</sub>, *r*<sub>1</sub>.
+-   Let
+    *a*<sub>1</sub> = *g*<sup>*r*<sub>1</sub></sup>*v*<sub>1</sub><sup>−*c*<sub>1</sub></sup>.
+
