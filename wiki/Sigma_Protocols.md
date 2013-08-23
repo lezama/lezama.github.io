@@ -125,5 +125,5 @@ simulator, so that this can be done. Indeed, to generate
     *a*<sub>1</sub> = *g*<sup>*r*<sub>1</sub></sup>*v*<sub>1</sub><sup>−*c*<sub>1</sub></sup>.
 
 Indeed, you then have
-*g*<sup>*r*<sub>1</sub></sup> = *a*<sub>1</sub>*v*<sub>1</sub><sup>*c*<sub>1</sub></sup>
+*g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
 so that the run is valid.
