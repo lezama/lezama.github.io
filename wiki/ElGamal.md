@@ -36,9 +36,9 @@ Bob signs *m* ∈ *G*<sub>*q*</sub> as
 *S**I**G*<sub>*B*</sub>(*m*)=(*r* − *x**e*, *H*(*m*.*g*<sup>*r*</sup>)).
 
 Alice verifies (*s*, *e*) checking that
-*e* = *H*(*m*.*g*<sup>*s*</sup>*y*<sup>*e*</sup>).
+*e* = *H*(*m*.*g*<sup>*s*</sup>*g*<sup>*x*</sup><sup>*e*</sup>).
 
 Indeed,
-*g*<sup>*s*</sup>*y*<sup>*e*</sup> = *g*<sup>*r* − *x**e*</sup>*g*<sup>*x**e*</sup> = *g*<sup>*r*</sup>.
+*g*<sup>*s*</sup>*y*<sup>*e*</sup> = *g*<sup>*r* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup> = *g*<sup>*r*</sup>.
 
 
