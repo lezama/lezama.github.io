@@ -212,11 +212,8 @@ challenging himself:
 that *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed, if Bob was honest
 it should be that
 
-*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
 .
-
-Now, think of *v* as a message that Bob had to sign. His unique
-transmission to Alice
 
 Schnorr signatures
 ------------------
