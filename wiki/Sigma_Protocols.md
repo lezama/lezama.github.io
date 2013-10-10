@@ -232,10 +232,10 @@ Bob computes *c* = *H*(*g*<sup>*s*</sup>, *m*) and *r* = *s* + *w*
 
 Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*c*, *r*).
 
-Alice verifies (*c*, *r*) checking that
-*c* = *H*(*g*<sup>*r*</sup>*g*<sup>−*w**c*</sup>, *m*).
+Alice verifies (*c*, *r*) checking that *c* = *H*(*a*, *m*) with
+*a* = *v*<sup>−*c*</sup>*g*<sup>*r*</sup>.
 
 Indeed, if Bob was honest it should be that
-*g*<sup>*r*</sup>*g*<sup>−*w**c*</sup> = *g*<sup>*s* + *w**c*</sup>*g*<sup>−*w**c*</sup> = *g*<sup>*s*</sup>.
+*v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*s* + *w**c*</sup> = *g*<sup>*s*</sup> = *a*.
 
 
