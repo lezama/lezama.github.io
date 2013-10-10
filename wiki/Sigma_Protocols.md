@@ -127,3 +127,12 @@ simulator, so that this can be done. Indeed, to generate
 Indeed, you then have
 *g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
 so that the run is valid.
+
+Non-interactive version
+-----------------------
+
+Instead of doing the Sigma protocol in three rounds, we could just do it
+in one round, according to the Fiat-Shamir heuristics. The idea is that
+the prover challenges himself with something that he does not really
+control, namely *h*(*v*, *a*), where <math>h<math> is a hash function
+like SHA2.
