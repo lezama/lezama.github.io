@@ -226,7 +226,8 @@ Bob needs a random ephemeral key *s*. He computes
 *c* = *H*(*g*<sup>*s*</sup>, *v*).
 
   
-Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*s* + *x**c*, *c*).
+Bob signs *m* ∈ *G* as
+*S**I**G*<sub>*B*</sub>(*m*)=(*g*<sup>*s*</sup>, *c*, *s* + *x**c*).
 
 Alice verifies (*u*, *v*) checking that
 *v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>, *v*).
