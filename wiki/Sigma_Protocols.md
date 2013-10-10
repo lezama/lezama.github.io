@@ -222,8 +222,9 @@ transmission to Alice
 Schnorr signatures
 ------------------
 
-Bob needs a random ephemeral key *s*. He computes
-*c* = *H*(*g*<sup>*s*</sup>, *v*).
+Bob has *P**r**i**v**K**B* = *w* and
+*P**u**b**K**B* = *g*<sup>*w*</sup>. He generates a random ephemeral key
+*s*. He computes *c* = *H*(*g*<sup>*s*</sup>, *v*).
 
   
 Bob signs *m* ∈ *G* as
