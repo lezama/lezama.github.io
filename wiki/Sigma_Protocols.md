@@ -84,15 +84,16 @@ The protocol has three rounds:
 *h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
- and similarly.
+ and similarly for $h&lt;\\math&gt; with &lt;math&gt;v&lt;\\math&gt;.
 
-**Ex. 3: Cyphertext encryption**
 
-Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
+'''Ex. 3: Cyphertext encryption'''
 
--   Public input (*m*, *a*, *b*).
+Fix &lt;math&gt;h=g^x=PubKT$ an integer.
+
+-   Public input (*m*, *u*, *v*).
 -   Agreed relation
-    ((*m*, *a*, *b*),*w*)∈*R* ⇔ *a* = *g*<sup>*w*</sup> ∧ *b* = *g*<sup>*x*</sup><sup>*w*</sup>*m*.
+    ((*m*, *u*, *v*),*w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
@@ -106,17 +107,16 @@ The protocol has three rounds:
 *B* → *A* : *r* = *w**c* + *s*
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
-*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
+*g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
- and similarly.
+ and similarly for
+$h=g^x&lt;\\math&gt; with &lt;math&gt;v'=v/m&lt;\\math&gt;.
 
-Composability
--------------
+== Composability ==
 
-Consider *v*<sub>0</sub>, *v*<sub>1</sub> and
-*R*<sub>0</sub>, *R*<sub>1</sub>. Say Bob pretends to have
-*w*<sub>0</sub>, *w*<sub>1</sub> such that
+Consider &lt;math&gt;v\_0, v\_1$ and *R*<sub>0</sub>, *R*<sub>1</sub>.
+Say Bob pretends to have *w*<sub>0</sub>, *w*<sub>1</sub> such that
 (*v*<sub>0</sub>, *w*<sub>0</sub>)∈*R*<sub>0</sub> ∧ (*v*<sub>1</sub>, *w*<sub>1</sub>)∈*R*<sub>1</sub>,
 and does not want to disclose them. Is there a Sigma protocol for this
 new relation
