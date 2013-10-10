@@ -233,6 +233,6 @@ Alice verifies (*a*, *c*, *r*) checking that
 *c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *c*).
 
 Indeed, if Bob was honest it should be that
-*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*s* − *w**c*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s*</sup>.
+*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s* − *w**c*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s*</sup>.
 
 
