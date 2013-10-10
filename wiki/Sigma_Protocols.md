@@ -209,10 +209,10 @@ challenging himself:
 
 *B* → *A* : *a*, *c*, *r* = *w**c* + *s*
  Alice validates Bob response by checking that *c* = *H*(*a*, *m*) and
-that *g*<sup>*r*</sup>*v*<sup>−*c*</sup> = *a*. Indeed, if Bob was
+that *v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *a*. Indeed, if Bob was
 honest it should be that
 
-*g*<sup>*r*</sup>*v*<sup>−*c*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup>*v*<sup>−*c*</sup> = *a*
+*v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *a*
 .
 
 Schnorr signatures
