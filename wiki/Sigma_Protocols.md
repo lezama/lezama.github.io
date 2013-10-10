@@ -228,7 +228,7 @@ Schnorr signatures
 
   
 Bob signs *m* ∈ *G* as
-*S**I**G*<sub>*B*</sub>(*m*)=(*g*<sup>*s*</sup>, *c*, *s* − *w**c*).
+*S**I**G*<sub>*B*</sub>(*m*)=(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *v*),*s* − *w**c*).
 
 Alice verifies (*a*, *c*, *r*) checking that
 *c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *c*).
