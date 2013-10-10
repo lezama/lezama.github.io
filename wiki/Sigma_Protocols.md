@@ -195,7 +195,7 @@ namely *H*(*a*, *v*), where *H* is a hash function like SHA2. For
 instance, let us apply this procedure to the Schnorr identification
 protocol. We get:
 
--   Public input *v* ∈ *G*.
+-   Public input *m* = *v* ∈ *G*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -205,10 +205,10 @@ challenging himself:
 
 *B* → *B*′:*a* = *g*<sup>*s*</sup>
 
-*B*′→*B* : *c* = *H*(*a*, *v*)
+*B*′→*B* : *c* = *H*(*a*, *m*)
 
 *B* → *A* : *a*, *c*, *r* = *w**c* + *s*
- Alice validates Bob response by checking that *c* = *H*(*a*, *v*) and
+ Alice validates Bob response by checking that *c* = *H*(*a*, *m*) and
 that *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed, if Bob was honest
 it should be that
 
