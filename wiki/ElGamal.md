@@ -32,9 +32,11 @@ Indeed,
 Schnorr signatures
 ------------------
 
+Bob needs a random ephemeral key *w*. She computes
+*e* = *H*(*m*.*g*<sup>*w*</sup>)).
+
   
-Bob signs *m* ∈ *G* as
-*S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*, *H*(*m*.*g*<sup>*w*</sup>)).
+Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*, *e*).
 
 Alice verifies (*s*, *e*) checking that
 *e* = *H*(*m*.*g*<sup>*s*</sup>*g*<sup>*x*</sup><sup>*e*</sup>).
