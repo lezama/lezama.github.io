@@ -218,7 +218,7 @@ it should be that
 Schnorr signatures
 ------------------
 
--   Public input a message *m*, and *v* = *P**u**b**K**B*.
+-   Public input a message *m* and *v* = *P**u**b**K**B*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w* = *P**r**i**v**K**B*.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
