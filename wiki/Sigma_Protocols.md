@@ -23,7 +23,7 @@ The protocol has three rounds:
 
 *A* → *B* : *c* = *c*(*v*, *R*, *a*)
 
-*B* → *B* : *r* = *r*(*v*, *R*, *w*, *a*, *c*, *w*)
+*B* → *A* : *r* = *r*(*v*, *R*, *w*, *a*, *c*, *w*)
  Lastly, Alice checks that Bob response *r* to her challenge *r* is
 valid. This explains what the last two rounds are for. The first round
 is there out of technical necessity: Bob chooses this *a* as a mask for
@@ -52,7 +52,7 @@ The protocol has three rounds:
 
 *A* → *B* : *c*
 
-*B* → *B* : *r* = *w**c* + *u*
+*B* → *A* : *r* = *w**c* + *u*
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
@@ -102,7 +102,7 @@ The protocol has three rounds:
 
 *A* → *B* : *s*
 
-*B* → *B* : (*c*<sub>0</sub>, *c*<sub>1</sub>),(*r*<sub>0</sub>, *r*<sub>1</sub>)
+*B* → *A* : (*c*<sub>0</sub>, *c*<sub>1</sub>),(*r*<sub>0</sub>, *r*<sub>1</sub>)
  where *r*<sub>0</sub> is computed by Bob thanks to his knowledge of
 *w*<sub>0</sub>. Alice validates Bob response by checking that:
 
