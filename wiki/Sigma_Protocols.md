@@ -59,7 +59,7 @@ The protocol has three rounds:
 *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed, if Bob was honest it
 should be that
 
-*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
 
 **Ex. 2: Diffie-Hellman pairs**
 
@@ -189,26 +189,52 @@ Non-interactive version
 -----------------------
 
 Instead of doing the Sigma protocol in three rounds, we could just do it
-in one round, according to the Fiat-Shamir heuristics. The idea is that
-the prover challenges himself with something that he does not really
-control, namely *H*(*a*, *v*), where *h* is a hash function like SHA2.
-Notice how the [Schnorr signature
-scheme](/wiki/Schnorr_signature_scheme "wikilink") is nothing but Fiat-Shamir
-applied to the Schorr identification scheme.
+in one round, by musing the Fiat-Shamir heuristics. The idea is that Bob
+challenges himself with something that he does not really control,
+namely *H*(*a*, *v*), where *h* is a hash function like SHA2. For
+instance, let us apply this procedure to the Schnorr identification
+protocol. We get:
+
+-   Public input *v* ∈ *G*.
+-   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
+-   Private input *w*.
+-   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
+-   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
+
+The modified protocol has only one true round, since B' is just B
+challenging himself:
+
+*B* → *B*′:*a* = *g*<sup>*s*</sup>
+
+*B*′→*B* : *c* = *H*(*a*, *v*)
+
+*B* → *A* : *a*, *c*, *r* = *w**c* + *s*
+ Alice validates Bob response by checking that
+*g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed, if Bob was honest it
+should be that
+
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*
+. Moreover, she also checks that
+
+*c* = *H*(*a*, *v*)
+.
+
+Now, think of *v* as a message that Bob had to sign. His unique
+transmission to Alice
 
 Schnorr signatures
 ------------------
 
-Bob needs a random ephemeral key *w*. He computes
-*e* = *H*(*g*<sup>*w*</sup> ⋅ *m*).
+Bob needs a random ephemeral key *s*. He computes
+*e* = *H*(*g*<sup>*s*</sup>, *m*).
 
   
-Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*, *e*).
+Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*s* − *x**e*, *e*).
 
 Alice verifies (*u*, *v*) checking that
 *v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>*m*).
 
 Indeed, if Bob was honest it should be that
-*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*w* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup> = *g*<sup>*w*</sup>.
+*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*s* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup> = *g*<sup>*s*</sup>.
 
 
