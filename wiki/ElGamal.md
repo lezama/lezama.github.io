@@ -26,7 +26,7 @@ Alice encrypts *m* ∈ *G*<sub>*q*</sub> as
 Bob decrypts (*a*, *b*) as *a*/*b*<sup>*x*</sup>.
 
 Indeed,
-*a*/*b*<sup>*x*</sup> = *y*<sup>*r*</sup>*m*/*g*<sup>*r**x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
+*a*/*b*<sup>*x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
 
 Schnorr signatures
 ------------------
