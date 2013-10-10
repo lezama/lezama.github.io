@@ -228,7 +228,7 @@ instead of *v*.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
 
   
-Bob computes *c* = *H*(*g*<sup>*s*</sup>, *m*) and *r* = *s* − *w**c*.
+Bob computes *c* = *H*(*g*<sup>*s*</sup>, *m*) and *r* = *s* + *w**c*.
 
 Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*c*, *r*).
 
@@ -236,6 +236,6 @@ Alice verifies (*c*, *r*) checking that
 *c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *m*).
 
 Indeed, if Bob was honest it should be that
-*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s* − *w**c*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s*</sup>.
+*g*<sup>*r*</sup>*g*<sup>−*w**c*</sup> = *g*<sup>*s* + *w**c*</sup>*g*<sup>−*w**c*</sup> = *g*<sup>*s*</sup>.
 
 
