@@ -22,10 +22,10 @@ ElGamal encryption
 Alice encrypts *m* ∈ *G* as
 {*m*}<sub>*P**u**b**K**B*</sub> = (*g*<sup>*r*</sup>, *g*<sup>*x*</sup><sup>*r*</sup>*m*).
 
-Bob decrypts (*a*, *b*) as *b*/*a*<sup>*x*</sup>.
+Bob decrypts (*u*, *v*) as *v*/*u*<sup>*x*</sup>.
 
 Indeed,
-*b*/*a*<sup>*x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
+*v*/*u*<sup>*x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
 
 Schnorr signatures
 ------------------
