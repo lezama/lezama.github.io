@@ -26,7 +26,7 @@ Alice encrypts *m* ∈ *G* as
 
 Bob decrypts (*u*, *v*) as *v*/*u*<sup>*x*</sup>.
 
-Indeed,
+Indeed, if Alice was honest it should be that
 *v*/*u*<sup>*x*</sup> = *g*<sup>*x**w*</sup>*m*/*g*<sup>*w**x*</sup> = *m*.
 
 Schnorr signatures
