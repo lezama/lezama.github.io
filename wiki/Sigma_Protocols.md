@@ -199,7 +199,6 @@ protocol. We get:
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
--   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
 
 The modified protocol has only one true round, since B' is just B
 challenging himself:
@@ -222,9 +221,10 @@ transmission to Alice
 Schnorr signatures
 ------------------
 
-Bob has *P**r**i**v**K**B* = *w* and
-*P**u**b**K**B* = *g*<sup>*w*</sup>. He generates a random ephemeral key
-*s*. He computes *c* = *H*(*g*<sup>*s*</sup>, *v*).
+-   Public input *v* = *P**u**b**K**B* = *g*<sup>*w*</sup>.
+-   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
+-   Private input *w* = *P**r**i**v**K**B*.
+-   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
 
   
 Bob signs *m* ∈ *G* as
