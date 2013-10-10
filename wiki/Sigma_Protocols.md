@@ -221,7 +221,7 @@ transmission to Alice
 Schnorr signatures
 ------------------
 
--   Public input *v* = *P**u**b**K**B* = *g*<sup>*w*</sup>.
+-   Public input *v* = *P**u**b**K**B*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w* = *P**r**i**v**K**B*.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
