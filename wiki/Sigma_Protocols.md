@@ -229,7 +229,7 @@ Bob needs a random ephemeral key *s*. He computes
 Bob signs *m* ∈ *G* as
 *S**I**G*<sub>*B*</sub>(*m*)=(*g*<sup>*s*</sup>, *c*, *s* + *w**c*).
 
-Alice verifies (*u*, *v*) checking that
+Alice verifies (*a*, *c*, *r*) checking that
 *v* = *H*(*g*<sup>*u*</sup>*g*<sup>*w*</sup><sup>*v*</sup>, *v*).
 
 Indeed, if Bob was honest it should be that
