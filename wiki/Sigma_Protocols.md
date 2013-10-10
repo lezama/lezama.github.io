@@ -58,7 +58,7 @@ The protocol has three rounds:
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
-*g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*.
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*.
 
 **Ex. 2: Diffie-Hellman pairs**
 
@@ -80,7 +80,7 @@ The protocol has three rounds:
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
 *h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
-*g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
 
 Composability
 -------------
