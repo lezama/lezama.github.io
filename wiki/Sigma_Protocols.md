@@ -60,8 +60,10 @@ The protocol has three rounds:
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*
 
-**Ex. 2: Diffie-Hellman pairs** Fix another *h* an integer. The powers
-of *h* form a subgroup *H* inside the group *Z*<sub>*p*</sub>.
+**Ex. 2: Diffie-Hellman pairs**
+
+Fix another *h* an integer. The powers of *h* form a subgroup *H* inside
+the group *Z*<sub>*p*</sub>.
 
 -   Public input *u* ∈ *G*, *v* ∈ *H*.
 -   Agreed relation
@@ -84,8 +86,9 @@ The protocol has three rounds:
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly.
 
-*'Ex. 3: Cyphertext encryption* Fix
-*h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
+**Ex. 3: Cyphertext encryption**
+
+Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
 -   Public input (*m*, *a*, *b*).
 -   Agreed relation
