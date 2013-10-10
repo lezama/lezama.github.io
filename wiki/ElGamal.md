@@ -21,7 +21,7 @@ ElGamal encryption
 
   
 Alice encrypts *m* ∈ *G*<sub>*q*</sub> as
-{*m*}<sub>*P**u**b**K**B*</sub> = (*y*<sup>*r*</sup>*m*, *g*<sup>*r*</sup>).
+{*m*}<sub>*P**u**b**K**B*</sub> = (*g*<sup>*x*</sup><sup>*r*</sup>*m*, *g*<sup>*r*</sup>).
 
 Bob decrypts (*a*, *b*) as *a*/*b*<sup>*x*</sup>.
 
