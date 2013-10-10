@@ -225,9 +225,9 @@ Schnorr signatures
 
   
 Bob signs *m* ∈ *G* as
-*S**I**G*<sub>*B*</sub>(*m*)=(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *v*),*s* − *w**c*).
+*S**I**G*<sub>*B*</sub>(*m*)=(*H*(*g*<sup>*s*</sup>, *v*),*s* − *w**H*(*g*<sup>*s*</sup>, *v*)).
 
-Alice verifies (*a*, *c*, *r*) checking that
+Alice verifies (*c*, *r*) checking that
 *c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *c*).
 
 Indeed, if Bob was honest it should be that
