@@ -4,7 +4,7 @@ permalink: wiki/ElGamal/
 layout: wiki
 ---
 
-Take *p* a prime and *g* an integer. The powers of *g* form a subgroup
+Fix *p* a prime and *g* an integer. The powers of *g* form a subgroup
 *G*<sub>*q*</sub> (having *q* elements) inside the group
 *Z*<sub>*p*</sub> (having *p* elements), which is that of integers
 modulo *p*. The choice of these *p* and *g* is important so that they
