@@ -218,14 +218,14 @@ it should be that
 Schnorr signatures
 ------------------
 
--   Public input *m*, *v* = *P**u**b**K**B*.
+-   Public input a message *m*, and *v* = *P**u**b**K**B*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w* = *P**r**i**v**K**B*.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
 
   
 Bob signs *m* ∈ *G* as
-*S**I**G*<sub>*B*</sub>(*m*)=(*H*(*g*<sup>*s*</sup>, *v*),*s* − *w**H*(*g*<sup>*s*</sup>, *v*)).
+*S**I**G*<sub>*B*</sub>(*m*)=(*H*(*g*<sup>*s*</sup>, *m*),*s* − *w**H*(*g*<sup>*s*</sup>, *m*)).
 
 Alice verifies (*c*, *r*) checking that
 *c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *c*).
