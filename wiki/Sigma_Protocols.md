@@ -223,15 +223,15 @@ Schnorr signatures
 ------------------
 
 Bob needs a random ephemeral key *s*. He computes
-*e* = *H*(*g*<sup>*s*</sup>, *m*).
+*c* = *H*(*g*<sup>*s*</sup>, *v*).
 
   
-Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*s* − *x**e*, *e*).
+Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*s* + *x**c*, *c*).
 
 Alice verifies (*u*, *v*) checking that
-*v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>, *m*).
+*v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>, *v*).
 
 Indeed, if Bob was honest it should be that
-*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*s* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup> = *g*<sup>*s*</sup>.
+*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*s* + *x**c*</sup>*g*<sup>*x*</sup><sup>*c*</sup> = *g*<sup>*s*</sup>.
 
 
