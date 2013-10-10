@@ -32,7 +32,7 @@ Indeed,
 Schnorr signatures
 ------------------
 
-Bob needs a random ephemeral key *w*. She computes
+Bob needs a random ephemeral key *w*. He computes
 *e* = *H*(*m*.*g*<sup>*w*</sup>)).
 
   
