@@ -38,8 +38,8 @@ Bob needs a random ephemeral key *w*. He computes
   
 Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*, *e*).
 
-Alice verifies (*s*, *e*) checking that
-*e* = *H*(*m*.*g*<sup>*s*</sup>*g*<sup>*x*</sup><sup>*e*</sup>).
+Alice verifies (*u*, *v*) checking that
+*v* = *H*(*m*.*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>).
 
 Indeed,
 *g*<sup>*w* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup> = *g*<sup>*w*</sup>.
