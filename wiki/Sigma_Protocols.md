@@ -33,10 +33,10 @@ Building blocks
 ---------------
 
 Here are examples of Sigma protocols based on the hardness of Discrete
-Logarithms. Take *p* a prime and *g*, *h* an integers. The powers of *g*
-(resp. *h*) form a subgroup *G* (resp. *H* ) inside the group
-*Z*<sub>*p*</sub>, which is that of integers modulo *p*. The choice of
-these *p* and *g* is important so that they meet the [Decisional
+Logarithms. Fix *p* a prime and *g* an integer. The powers of *g* form a
+subgroup *G* inside the group *Z*<sub>*p*</sub>, which is that of
+integers modulo *p*. The choice of these *p* and *g* is important so
+that they meet the [Decisional
 Diffie-Hellman](http://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption)
 assumption; but there are standard techniques for doing that.
 
@@ -60,11 +60,36 @@ The protocol has three rounds:
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*
 
-**Ex. 2: Diffie-Hellman pairs**
+**Ex. 2: Diffie-Hellman pairs** Fix another *h* an integer. The powers
+of *h* form a subgroup *H* inside the group *Z*<sub>*p*</sub>.
 
 -   Public input *u* ∈ *G*, *v* ∈ *H*.
 -   Agreed relation
     ((*u*, *v*),*w*)∈*R* ⇔ *g*<sup>*w*</sup> = *u* ∧ *h*<sup>*w*</sup> = *v*.
+-   Private input *w*.
+-   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
+-   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
+
+The protocol has three rounds:
+
+*B* → *A* : *a* = *g*<sup>*s*</sup>
+
+*A* → *B* : *c*
+
+*B* → *A* : *r* = *w**c* + *s*
+ Alice validates Bob response by checking that
+*g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
+*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
+
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
+ and similarly.
+
+*'Ex. 3: Cyphertext encryption* Fix
+*h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
+
+-   Public input (*m*, *a*, *b*).
+-   Agreed relation
+    ((*m*, *a*, *b*),*w*)∈*R* ⇔ *a* = *g*<sup>*w*</sup> ∧ *b* = *g*<sup>*x*</sup><sup>*w*</sup>*m*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
