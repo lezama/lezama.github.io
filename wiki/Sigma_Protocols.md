@@ -59,8 +59,6 @@ The protocol has three rounds:
 *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*
-, and
-*h*<sup>*r*</sup> = *h*<sup>*w*</sup><sup>*c*</sup>*h*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*.
 
 **Ex. 2: Diffie-Hellman pairs**
 
@@ -83,6 +81,7 @@ The protocol has three rounds:
 *h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
+ and similarly.
 
 Composability
 -------------
