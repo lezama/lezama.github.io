@@ -20,13 +20,13 @@ ElGamal encryption
 ------------------
 
   
-Alice encrypts *m* ∈ *G*<sub>*q*</sub> as
-{*m*}<sub>*P**u**b**K**B*</sub> = (*g*<sup>*x*</sup><sup>*r*</sup>*m*, *g*<sup>*r*</sup>).
+Alice encrypts *m* ∈ *G* as
+{*m*}<sub>*P**u**b**K**B*</sub> = (*g*<sup>*r*</sup>, *g*<sup>*x*</sup><sup>*r*</sup>*m*).
 
-Bob decrypts (*a*, *b*) as *a*/*b*<sup>*x*</sup>.
+Bob decrypts (*a*, *b*) as *b*/*a*<sup>*x*</sup>.
 
 Indeed,
-*a*/*b*<sup>*x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
+*b*/*a*<sup>*x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
 
 Schnorr signatures
 ------------------
