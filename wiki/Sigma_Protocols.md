@@ -228,8 +228,9 @@ will put to himself is to be fabricated with some public *m* instead of
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
 
   
-Bob signs *m* ∈ *G* as
-*S**I**G*<sub>*B*</sub>(*m*)=(*H*(*g*<sup>*s*</sup>, *m*),*s* − *w**H*(*g*<sup>*s*</sup>, *m*)).
+Bob computes *c* = *H*(*g*<sup>*s*</sup>, *m*) and *r* = *s* − *w**c*.
+
+Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*c*, *r*).
 
 Alice verifies (*c*, *r*) checking that
 *c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *m*).
