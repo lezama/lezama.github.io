@@ -93,7 +93,7 @@ Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 -   Public input (*m*, *u*, *v*).
 -   Agreed relation
     ((*m*, *u*, *v*),*w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
-    under [ElGammalSchnorr ElGamal](/wiki/ElGammalSchnorr_ElGamal "wikilink")
+    under [ElGamal ElGammalSchnorr](/wiki/ElGamal_ElGammalSchnorr "wikilink")
     with ephemeral key *w*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
