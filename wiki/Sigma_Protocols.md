@@ -29,34 +29,58 @@ valid. This explains what the last two rounds are for. The first round
 is there out of technical necessity: Bob chooses this *a* as a mask for
 passing the challenge without disclosing *w*.
 
-Example: the Discrete Logarithm
--------------------------------
+Building blocks
+---------------
 
-Here is an example based on Discrete Logarithms. Take *p* a prime and
-*g* an integer. The powers of *g* form a subgroup *G*<sub>*q*</sub>
-(having *q* elements) inside the group *Z*<sub>*p*</sub> (having *p*
-elements), which is that of integers modulo *p*. The choice of these *p*
-and *g* is important so that they meet the [Decisional
+Here are examples of Sigma protocols based on the hardness of Discrete
+Logarithms. Take *p* a prime and *g*, *h* an integers. The powers of *g*
+(resp. *h*) form a subgroup *G* (resp. *H* ) inside the group
+*Z*<sub>*p*</sub>, which is that of integers modulo *p*. The choice of
+these *p* and *g* is important so that they meet the [Decisional
 Diffie-Hellman](http://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption)
 assumption; but there are standard techniques for doing that.
 
--   Public input *v* ∈ *G*<sub>*q*</sub>.
+**Ex. 1: Discrete Logarithm**
+
+-   Public input *v* ∈ *G*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w*.
--   Bob will need some random *u* ∈ *Z*<sub>*p*</sub>.
+-   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
 
 The protocol has three rounds:
 
-*B* → *A* : *a* = *g*<sup>*u*</sup>
+*B* → *A* : *a* = *g*<sup>*s*</sup>
 
 *A* → *B* : *c*
 
-*B* → *A* : *r* = *w**c* + *u*
+*B* → *A* : *r* = *w**c* + *s*
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
-*g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*u*</sup> = *v*<sup>*c*</sup>*a*.
+*g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*.
+
+**Ex. 2: Diffie-Hellman pairs**
+
+-   Public input *u* ∈ *G*, *v* ∈ *H*.
+-   Agreed relation
+    ((*u*, *v*),*w*)∈*R* ⇔ *g*<sup>*w*</sup> = *u* ∧ *h*<sup>*w*</sup> = *v*.
+-   Private input *w*.
+-   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
+-   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
+
+The protocol has three rounds:
+
+*B* → *A* : *a* = *g*<sup>*s*</sup>
+
+*A* → *B* : *c*
+
+*B* → *A* : *r* = *w**c* + *s*
+ Alice validates Bob response by checking that
+*g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
+*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
+
+*g*<sup>*r*</sup> = *g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
 
 Composability
 -------------
