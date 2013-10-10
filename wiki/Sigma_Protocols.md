@@ -42,10 +42,10 @@ assumption; but there are standard techniques for doing that.
 
 **Ex. 1: Schnorr identification protocol**
 
--   Public input *v* ∈ *G*.
+-   Public input *v* = *P**u**b**K**B*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
--   Private input *w*.
--   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
+-   Private input *w* = *P**r**i**v**K**B*.
+-   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
 
 The protocol has three rounds:
@@ -218,7 +218,10 @@ it should be that
 Schnorr signatures
 ------------------
 
--   Public input a message *m* and *v* = *P**u**b**K**B*.
+Let us further modify the above, and say that the challenge that Bob
+will put is to be fabricated with some public *m* instead of *v*.
+
+-   Public input *m* a message and *v* = *P**u**b**K**B*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w* = *P**r**i**v**K**B*.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
@@ -228,7 +231,7 @@ Bob signs *m* ∈ *G* as
 *S**I**G*<sub>*B*</sub>(*m*)=(*H*(*g*<sup>*s*</sup>, *m*),*s* − *w**H*(*g*<sup>*s*</sup>, *m*)).
 
 Alice verifies (*c*, *r*) checking that
-*c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *c*).
+*c* = *H*(*g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup>, *m*).
 
 Indeed, if Bob was honest it should be that
 *g*<sup>*r*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s* − *w**c*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s*</sup>.
