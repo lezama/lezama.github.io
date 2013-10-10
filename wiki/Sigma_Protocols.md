@@ -40,7 +40,7 @@ that they meet the [Decisional
 Diffie-Hellman](http://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption)
 assumption; but there are standard techniques for doing that.
 
-**Ex. 1: Discrete Logarithm**
+**Ex. 1: Schnorr identification protocol**
 
 -   Public input *v* ∈ *G*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
@@ -88,7 +88,7 @@ should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* with *v*.
 
-**Ex. 3: Cyphertext encryption**
+**Ex. 3: Proof of cyphertext encryption**
 
 Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
