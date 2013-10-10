@@ -41,7 +41,7 @@ Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*,�
 Alice verifies (*u*, *v*) checking that
 *v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>*m*).
 
-Indeed, it should be that
+Indeed, if Bob was honest it should be that
 *g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>*m* = *g*<sup>*w* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup>*m* = *g*<sup>*w*</sup>*m*.
 
 
