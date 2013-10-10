@@ -33,7 +33,7 @@ Schnorr signatures
 ------------------
 
 Bob needs a random ephemeral key *w*. He computes
-*e* = *H*(*m*.*g*<sup>*w*</sup>)).
+*e* = *H*(*m*.*g*<sup>*w*</sup>).
 
   
 Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*, *e*).
