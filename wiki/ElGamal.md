@@ -29,19 +29,4 @@ Bob decrypts (*u*, *v*) as *v*/*u*<sup>*x*</sup>.
 Indeed, if Alice was honest it should be that
 *v*/*u*<sup>*x*</sup> = *g*<sup>*x**w*</sup>*m*/*g*<sup>*w**x*</sup> = *m*.
 
-Schnorr signatures
-------------------
-
-Bob needs a random ephemeral key *w*. He computes
-*e* = *H*(*g*<sup>*w*</sup> ⋅ *m*).
-
-  
-Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*, *e*).
-
-Alice verifies (*u*, *v*) checking that
-*v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>*m*).
-
-Indeed, if Bob was honest it should be that
-*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*w* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup> = *g*<sup>*w*</sup>.
-
 
