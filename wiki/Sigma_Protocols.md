@@ -227,12 +227,12 @@ Bob needs a random ephemeral key *s*. He computes
 
   
 Bob signs *m* ∈ *G* as
-*S**I**G*<sub>*B*</sub>(*m*)=(*g*<sup>*s*</sup>, *c*, *s* + *x**c*).
+*S**I**G*<sub>*B*</sub>(*m*)=(*g*<sup>*s*</sup>, *c*, *s* + *w**c*).
 
 Alice verifies (*u*, *v*) checking that
-*v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>, *v*).
+*v* = *H*(*g*<sup>*u*</sup>*g*<sup>*w*</sup><sup>*v*</sup>, *v*).
 
 Indeed, if Bob was honest it should be that
-*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*s* + *x**c*</sup>*g*<sup>*x*</sup><sup>*c*</sup> = *g*<sup>*s*</sup>.
+*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup> = *g*<sup>*s* + *w**c*</sup>*g*<sup>*w*</sup><sup>*c*</sup> = *g*<sup>*s*</sup>.
 
 
