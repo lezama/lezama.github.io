@@ -33,15 +33,15 @@ Schnorr signatures
 ------------------
 
 Bob needs a random ephemeral key *w*. He computes
-*e* = *H*(*m*.*g*<sup>*w*</sup>).
+*e* = *H*(*g*<sup>*w*</sup>*m*).
 
   
 Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*w* − *x**e*, *e*).
 
 Alice verifies (*u*, *v*) checking that
-*v* = *H*(*m*.*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>).
+*v* = *H*(*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>*m*).
 
-Indeed,
-*g*<sup>*w* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup> = *g*<sup>*w*</sup>.
+Indeed, it should be that
+*g*<sup>*u*</sup>*g*<sup>*x*</sup><sup>*v*</sup>*m* = *g*<sup>*w* − *x**e*</sup>*g*<sup>*x*</sup><sup>*e*</sup>*m* = *g*<sup>*w*</sup>*m*.
 
 
