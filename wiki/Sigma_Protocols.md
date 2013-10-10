@@ -84,12 +84,11 @@ The protocol has three rounds:
 *h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
- and similarly for $h&lt;\\math&gt; with &lt;math&gt;v&lt;\\math&gt;.
+ and similarly for *h* with *v*.
 
+**Ex. 3: Cyphertext encryption**
 
-'''Ex. 3: Cyphertext encryption'''
-
-Fix &lt;math&gt;h=g^x=PubKT$ an integer.
+Fix *h* = *P**u**b**K**T* an integer.
 
 -   Public input (*m*, *u*, *v*).
 -   Agreed relation
@@ -107,16 +106,17 @@ The protocol has three rounds:
 *B* → *A* : *r* = *w**c* + *s*
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
-*g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*. Indeed,
+*h*<sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
- and similarly for
-$h=g^x&lt;\\math&gt; with &lt;math&gt;v'=v/m&lt;\\math&gt;.
+ and similarly for *h* with *v*′=*v*/*m*.
 
-== Composability ==
+Composability
+-------------
 
-Consider &lt;math&gt;v\_0, v\_1$ and *R*<sub>0</sub>, *R*<sub>1</sub>.
-Say Bob pretends to have *w*<sub>0</sub>, *w*<sub>1</sub> such that
+Consider *v*<sub>0</sub>, *v*<sub>1</sub> and
+*R*<sub>0</sub>, *R*<sub>1</sub>. Say Bob pretends to have
+*w*<sub>0</sub>, *w*<sub>1</sub> such that
 (*v*<sub>0</sub>, *w*<sub>0</sub>)∈*R*<sub>0</sub> ∧ (*v*<sub>1</sub>, *w*<sub>1</sub>)∈*R*<sub>1</sub>,
 and does not want to disclose them. Is there a Sigma protocol for this
 new relation
