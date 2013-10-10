@@ -209,14 +209,11 @@ challenging himself:
 *B*′→*B* : *c* = *H*(*a*, *v*)
 
 *B* → *A* : *a*, *c*, *r* = *w**c* + *s*
- Alice validates Bob response by checking that
-*g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed, if Bob was honest it
-should be that
+ Alice validates Bob response by checking that *c* = *H*(*a*, *v*) and
+that *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed, if Bob was honest
+it should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*
-. Moreover, she also checks that
-
-*c* = *H*(*a*, *v*)
 .
 
 Now, think of *v* as a message that Bob had to sign. His unique
