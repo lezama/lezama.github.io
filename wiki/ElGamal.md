@@ -18,14 +18,16 @@ the latter public.
 ElGamal encryption
 ------------------
 
+Alice needs a random ephemeral key *w*.
+
   
 Alice encrypts *m* ∈ *G* as
-{*m*}<sub>*P**u**b**K**B*</sub> = (*g*<sup>*r*</sup>, *g*<sup>*x*</sup><sup>*r*</sup>*m*).
+{*m*}<sub>*P**u**b**K**B*</sub> = (*g*<sup>*w*</sup>, *g*<sup>*x*</sup><sup>*w*</sup>*m*).
 
 Bob decrypts (*u*, *v*) as *v*/*u*<sup>*x*</sup>.
 
 Indeed,
-*v*/*u*<sup>*x*</sup> = *g*<sup>*x**r*</sup>*m*/*g*<sup>*r**x*</sup> = *m*.
+*v*/*u*<sup>*x*</sup> = *g*<sup>*x**w*</sup>*m*/*g*<sup>*w**x*</sup> = *m*.
 
 Schnorr signatures
 ------------------
