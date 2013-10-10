@@ -88,11 +88,11 @@ The protocol has three rounds:
 
 **Ex. 3: Cyphertext encryption**
 
-Fix *h* = *P**u**b**K**T* an integer.
+Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
 -   Public input (*m*, *u*, *v*).
 -   Agreed relation
-    ((*m*, *u*, *v*),*w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m*.
+    ((*m*, *u*, *v*),*w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*, *w*</sub>.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
@@ -106,10 +106,10 @@ The protocol has three rounds:
 *B* → *A* : *r* = *w**c* + *s*
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
-*h*<sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*. Indeed,
+*g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*. Indeed,
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
- and similarly for *h* with *v*′=*v*/*m*.
+ and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
 Composability
 -------------
