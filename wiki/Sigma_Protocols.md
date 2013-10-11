@@ -75,15 +75,15 @@ the group *Z*<sub>*p*</sub>.
 
 The protocol has three rounds:
 
-*B* → *A* : *a* = *g*<sup>*s*</sup>
+*B* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*g*<sup>*s*′</sup>
 
-*A* → *B* : *c*
+*A* → *B* : *c*, *c*′
 
-*B* → *A* : *r* = *w**c* + *s*
+*B* → *A* : *r* = *w**c* + *s*, *r*′=*w**c*′+*s*′
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
-*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*. Indeed, if Bob was honest it
-should be that
+*h*<sup>*r*′</sup> = *v*<sup>*c*′</sup>*a*′. Indeed, if Bob was honest
+it should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* with *v*.
@@ -102,15 +102,15 @@ Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
 The protocol has three rounds:
 
-*B* → *A* : *a* = *g*<sup>*s*</sup>
+*B* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*g*<sup>*x*</sup><sup>*s*′</sup>
 
-*A* → *B* : *c*
+*A* → *B* : *c*, *c*′
 
-*B* → *A* : *r* = *w**c* + *s*
+*B* → *A* : *r* = *w**c* + *s*, *r*′=*w**c*′+*s*′
  Alice validates Bob response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
-*g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*. Indeed, if
-Bob was honest it should be that
+*g*<sup>*x*</sup><sup>*r*′</sup> = (*v*/*m*)<sup>*c*′*a*′</sup>. Indeed,
+if Bob was honest it should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
