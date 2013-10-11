@@ -88,7 +88,7 @@ it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* with *v*.
 
-**Ex. 3: Proof of cyphertext encryption**
+**Ex. 3: Proof of cyphertext encryption by encrypter**
 
 Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
