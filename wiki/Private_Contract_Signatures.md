@@ -48,8 +48,8 @@ NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*A*</sup>,*v*))∨CCE<sup>*T*</sup>(*m*,(Pub<s
 -   It also constitutes a proof that the ephemeral key used is either
     Alice's or Bob's private key.
 -   Thus, whoever has done it, has admittedly signed m.
--   But in order to prove that he has, we need a proof of which private
-    key was used.
+-   But in order to know whom of Alice or Bob has signed, one needs a
+    proof of which of private keys was used.
 
 Thus unravel it, we need USPCS<sub>*B*</sub>(*m*)
 
