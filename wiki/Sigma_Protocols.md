@@ -159,6 +159,33 @@ honest it should be that
 response of this protocol, done towards with mask a and under challenge
 c.**
 
+**Ex. 5: Relative identification protocol**
+
+Fix *g*, *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
+
+-   Public input *n* = (*u*, *v*).
+-   Agreed relation
+    (*n*, *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup> ⇔ *n* = {1}<sub>Pub<sup>*T*</sup></sub>
+    under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") with ephemeral key *w*.
+-   Private input *w* = Priv<sup>*B*</sup></math>.
+-   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
+-   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
+
+The protocol has three rounds:
+
+*B* → *A* : *a* = *g*<sup>*s*</sup>, *a* = *g*<sup>*x*</sup><sup>*s*</sup>
+
+*A* → *B* : *c*
+
+*B* → *A* : *r* = *w**c* + *s*
+ Alice validates Bob's response by checking that
+*g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
+*g*<sup>*x*</sup><sup>*r*</sup> = *v*<sup>*c*</sup>*a*′. Indeed, if Bob
+was honest it should be that
+
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
+ and similarly for *h* = *g*<sup>*x*</sup> with *v*.
+
 Composability
 -------------
 
