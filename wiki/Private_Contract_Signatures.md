@@ -33,18 +33,30 @@ encryption and signature schemes.
 Outline of [Sigma protocols](/wiki/Sigma_Protocols "wikilink"), which are
 composable, interactive zero-knowledge proof schemes.
 
-Scheme
-------
+Simplified scheme
+-----------------
 
-Traditionally, PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
+An SPCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
+
+NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*m*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+ with s random.
+
+To unravel it, we need USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)
+
+NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCD<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+ with s random.
+
+A signature SIG<sub>*B*</sub><sup>*A*</sup>(*m*) is a pair
+
+SPCS<sub>*B*</sub><sup>*A*</sup>(*m*),USPCS<sub>*B*</sub><sup>*A*</sup>(*m*).
+
+Normal scheme
+-------------
+
+Normally, a PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
 
 NI((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*)∧Schnorr<sub>*A*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random.
-
-Why not try PCS<sub>*B*</sub><sup>*A*</sup>(*m*) to be
-
-NI(CCE<sup>*T*</sup>(*B*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*A*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
- with s random?
 
 To do
 -----
