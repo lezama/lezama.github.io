@@ -88,7 +88,7 @@ it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* with *v*.
 
-**Ex. 3: Proof of cyphertext encryption by encrypter**
+**Ex. 3: Proof of cyphertext content by encrypter**
 
 Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
@@ -115,7 +115,7 @@ if Bob was honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
-**Ex. 4: Proof of cyphertext encryption by decrypter**
+**Ex. 4: Proof of cyphertext content by decrypter (under construction)**
 
 Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
