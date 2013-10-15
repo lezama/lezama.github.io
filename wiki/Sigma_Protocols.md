@@ -166,9 +166,10 @@ new relation
 *R*<sub>0</sub> ∧ *R*<sub>1</sub> = {(*v*<sub>0</sub>, *v*<sub>1</sub>),(*w*<sub>0</sub>, *w*<sub>1</sub>) | (*v*<sub>0</sub>, *w*<sub>0</sub>)∈*R*<sub>0</sub> ∧ (*v*<sub>1</sub>, *w*<sub>1</sub>)∈*R*<sub>1</sub>}?
 If there was some for *R*<sub>0</sub> and *R*<sub>1</sub>, then yes. It
 suffices to combine the parallel run of both protocols into one, as
-tuples.
+tuples. We can use the same challenge c for both runs.
 
-**Denote by *P* ∧ *Q* the and composition of two protocols P and Q.**
+**Denote by (*P* ∧ *Q*)(*c*) the and composition of two protocols
+*P*(*c*) and *Q*(*c*).**
 
 Now, say Bob pretends to have one of *w*<sub>0</sub> or *w*<sub>1</sub>,
 and does not want to disclose it, not tell which one it is. Is there a
@@ -192,7 +193,7 @@ honest-verifier zero-knowledge". Here is how.
 -   Bob will need some random
     (*u*<sub>0</sub>, *a*<sub>0</sub>)∈*R*<sub>0</sub> and some run
     *a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub>.
--   Alice will need some random *s*.
+-   Alice will need some random *c*.
 
 The protocol has three rounds:
 
@@ -204,7 +205,7 @@ The protocol has three rounds:
  where *r*<sub>0</sub> is computed by Bob thanks to his knowledge of
 *w*<sub>0</sub>. Alice validates Bob response by checking that:
 
--   *s* = *c*<sub>0</sub> ⊕ *c*<sub>1</sub>
+-   *c* = *c*<sub>0</sub> ⊕ *c*<sub>1</sub>
 -   *a*<sub>0</sub>, *c*<sub>0</sub>, *r*<sub>0</sub> is valid
 -   *a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> is valid
 
@@ -226,7 +227,8 @@ Indeed, you then have
 *g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
 so that the run is valid.
 
-**Denote by *P* ∨ *Q* the or composition of two protocols P and Q.**
+**Denote by (*P* ∨ *Q*)(*c*) the or composition of two protocols P and
+Q. under challenge c.**
 
 Non-interactive version
 -----------------------
