@@ -65,8 +65,8 @@ The protocol has three rounds:
 should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
- **Denote by Schnorr<sub>*B*</sub>(*c*) a run of this protocol by prover
-B under challenge c.**
+ **Denote by *c* ↦ Schnorr<sub>*B*</sub>(*c*) this protocol, done by
+prover B under challenge c.**
 
 **Ex. 2: Diffie-Hellman pairs**
 
@@ -122,8 +122,8 @@ if Bob was honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
-**Denote by CCE<sub>*T*</sub>(*m*, *m*′)(*c*) a run of this protocol
-under challenge c.**
+**Denote by *c* ↦ CCE<sub>*T*</sub>(*m*, *m*′)(*c*) this protocol, under
+challenge c.**
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
@@ -154,8 +154,8 @@ honest it should be that
 
 *u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
 
-**Denote by CCD<sub>*T*</sub>(*m*, *m*′)(*c*) a run of this protocol
-under challenge c.**
+**Denote by *c* ↦ CCD<sub>*T*</sub>(*m*, *m*′)(*c*) this protocol, under
+challenge c.**
 
 Composability
 -------------
@@ -171,8 +171,8 @@ If there was some for *R*<sub>0</sub> and *R*<sub>1</sub>, then yes. It
 suffices to combine the parallel run of both protocols into one, as
 tuples. We can use the same challenge c for both runs.
 
-**Denote by (*P* ∧ *Q*)(*c*) the and composition of two protocols
-*P*(*c*) and *Q*(*c*).**
+**Denote by *c* ↦ (*P* ∧ *Q*)(*c*) the and composition of P and Q, under
+the shared challenge c.**
 
 Now, say Bob pretends to have one of *w*<sub>0</sub> or *w*<sub>1</sub>,
 and does not want to disclose it, not tell which one it is. Is there a
@@ -230,8 +230,8 @@ Indeed, you then have
 *g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
 so that the run is valid.
 
-**Denote by (*P* ∨ *Q*)(*c*) the or composition of two protocols P and
-Q, under the divided up challenge c.**
+**Denote by *c* ↦ (*P* ∨ *Q*)(*c*) the or composition of two protocols P
+and Q, under the divided up challenge c.**
 
 Non-interactive version
 -----------------------
@@ -239,9 +239,9 @@ Non-interactive version
 Instead of doing the Sigma protocol in three rounds, we could just do it
 in one round, by musing the Fiat-Shamir heuristics. The idea is that Bob
 challenges himself with something that he does not really control,
-namely *H*(*a*, *v*), where *H* is a hash function like SHA2. For
-instance, let us apply this procedure to the Schnorr identification
-protocol. We get:
+namely *H*(*a*, *m*), where *H* is a hash function like SHA2 and *m* is
+a public input, often just *v*. For instance, let us apply this
+procedure to the Schnorr identification protocol. We get:
 
 -   Public input *m* = *v* ∈ *G*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
@@ -288,4 +288,6 @@ Alice verifies (*c*, *r*) checking that *c* = *H*(*a*, *m*) with
 Indeed, if Bob was honest it should be that
 *v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*w**c* + *s*</sup> = *g*<sup>*s*</sup> = *a*.
 
-
+Thus, a Schnorr signature is essence just some
+(*a*, *r*, *s*)=Schnorr(*H*(*a*, *m*)) with s random, although often the
+a is dropped.
