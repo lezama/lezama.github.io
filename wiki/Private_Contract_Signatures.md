@@ -36,24 +36,42 @@ composable, interactive zero-knowledge proof schemes.
 Simplified scheme
 -----------------
 
-An SPCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
+An SPCS<sub>*A**B*</sub>(*m*) is
 
-NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*m*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
- with s random. Intuitively,
+NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*A*</sup>,*v*))∨CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+ with s random. Intuitively:
 
--   Bob provides a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
+-   It constitutes a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
     under [ElGamal](/wiki/ElGamal "wikilink").
--   But he leaves ambiguous whether the ephemeral key used is his
-    or Alice's.
+-   In order to provide such a proof one needs to have the ephemeral
+    key used.
+-   It also constitutes a proof that the ephemeral key used is either
+    Alice's or Bob's private key.
+-   Thus, whoever has done it, has admittedly signed m.
+-   But in order to prove that he has, we need a proof of which private
+    key was used.
 
-To unravel it, we need USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)
+Thus unravel it, we need USPCS<sub>*B*</sub>(*m*)
 
 NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCD<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
- with s' random.
+ with s' random. Intuitively:
 
-A signature SIG<sub>*B*</sub><sup>*A*</sup>(*m*) is a pair
+-   It constitutes a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
+    under [ElGamal](/wiki/ElGamal "wikilink").
+-   In order to provide such a proof one need to either have
+    Priv<sub>*B*</sub> used, or have Priv<sub>*T*</sub>.
+-   In any case it constitutes a proof that the ephemeral key used was
+    Bob's private key.
 
-(SPCS<sub>*B*</sub><sup>*A*</sup>(*m*),USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)).
+A signature SIG<sub>*B*</sub>(*m*) is a pair
+
+(SPCS<sub>*B*</sub>(*m*),USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)).
+ Notice that:
+
+-   No step discloses Priv<sub>*B*</sub>.
+-   Yet is constitutes a proof that
+    *v* = {*m*}<sub>Pub<sup>*T*</sup></sub> with ephemeral key
+    Priv<sub>*B*</sub>, which amounts to signing m.
 
 Normal scheme
 -------------
