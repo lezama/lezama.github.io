@@ -65,7 +65,7 @@ The protocol has three rounds:
 should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
- **Denote by *a*, *c* ↦ Schnorr<sub>*B*</sub>(*a*, *c*) the response of
+ **Denote by (*a*, *c*)↦Schnorr<sub>*B*</sub>(*a*, *c*) the response of
 this protocol, done by prover B with mask a and under challenge c.**
 
 **Ex. 2: Diffie-Hellman pairs**
@@ -122,7 +122,7 @@ if Bob was honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
-**Denote by *a*, *c* ↦ CCE<sup>*T*</sup>(*m*, *n*)(*a*, *c*) the
+**Denote by (*a*, *c*)↦CCE<sup>*T*</sup>(*m*, *n*)(*a*, *c*) the
 response of this protocol, done towards T with mask a and under
 challenge c.**
 
@@ -155,7 +155,7 @@ honest it should be that
 
 *u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
 
-**Denote by *a*, *c* ↦ CCD<sup>*T*</sup>(*m*, *n*)(*c*) the response of
+**Denote by (*a*, *c*)↦CCD<sup>*T*</sup>(*m*, *n*)(*c*) the response of
 this protocol, done towards with mask a and under challenge c.**
 
 Composability
@@ -174,7 +174,7 @@ tuples. We cannot use twice the same mask a for security reasons, so
 although could use twice the same challenge c for both runs, we will
 assume that both a and c are in fact pairs.
 
-**Denote by *a*, *c* ↦ (*P* ∧ *Q*)(*c*) the response to the and
+**Denote by (*a*, *c*)↦(*P* ∧ *Q*)(*a*, *c*) the response to the and
 composition of P and Q, under the pair of masks a and the pair of
 challenges c.**
 
@@ -234,7 +234,7 @@ Indeed, you then have
 *g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
 so that the run is valid.
 
-**Denote by *a*, *c* ↦ (*P* ∨ *Q*)(*c*) the response to the or
+**Denote by (*a*, *c*)↦(*P* ∨ *Q*)(*a*, *c*) the response to the or
 composition of two protocols P and Q, under the divided up mask a and
 challenge c.**
 
