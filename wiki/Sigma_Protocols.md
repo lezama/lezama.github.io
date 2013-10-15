@@ -44,9 +44,9 @@ assumption; but there are standard techniques for doing that.
 
 Fix *g* an integer.
 
--   Public input *v* = *P**u**b**K**B*.
+-   Public input *v* = Pub<sub>*B*</sub>.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
--   Private input *w* = *P**r**i**v**K**B*.
+-   Private input *w* = Priv<sub>*B*</sub>.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
 
@@ -94,11 +94,11 @@ it should be that
 
 **Ex. 3: Proof of cyphertext content by encrypter**
 
-Fix *g* and *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* integers.
+Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sub>*T*</sub> integers.
 
 -   Public input *m* and *m*′=(*u*, *v*).
 -   Agreed relation
-    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
+    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sub>*T*</sub></sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") with ephemeral key *w*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -123,13 +123,13 @@ if Bob was honest it should be that
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
-Fix *g* and *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* integers.
+Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sub>*T*</sub> integers.
 
 -   Public input *m* and *m*′=(*u*, *v*).
 -   Agreed relation
-    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
+    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sub>*T*</sub></sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") for Trent.
--   Private input *x* = *P**r**i**v**K**T*.
+-   Private input *x* = Priv<sub>*T*</sub>.
 -   Trent will need some random *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
 
