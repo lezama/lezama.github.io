@@ -60,7 +60,7 @@ The protocol has three rounds:
 should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
- **Denote by $\\textup{Schnorr}\_B(c)$ a run of this sigma protocol by
+ **Denote by Schnorr<sub>*B*</sub>(*c*) a run of this sigma protocol by
 prover B under challenge c.**
 
 **Ex. 2: Diffie-Hellman pairs** Fix *g* and *h* integers. The powers of
