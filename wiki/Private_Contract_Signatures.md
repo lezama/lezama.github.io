@@ -45,3 +45,11 @@ Why not try PCS<sub>*B*</sub><sup>*A*</sup>(*m*) to be
 
 *g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),(CCE<sup>*T*</sup>(*B*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*A*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random?
+
+To do
+-----
+
+Check duplication of a and c in and and or constructs.
+
+Check whether non-interactive CCE under ephemeral key PubB and challenge
+m is an established way of signing.
