@@ -44,7 +44,7 @@ assumption; but there are standard techniques for doing that.
 
 Fix *g* an integer.
 
--   Public input *v* = Pub<sub>*B*</sub>.
+-   Public input $v=\\textsc{Pub}\_B$.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w* = Priv<sub>*B*</sub>.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
@@ -62,7 +62,7 @@ The protocol has three rounds:
 should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
- **Denote by Schnorr<sub>*B*</sub>(*c*) a run of this protocol by prover
+ **Denote by $\\textsc{Schnorr}\_B(c)$ a run of this protocol by prover
 B under challenge c.**
 
 **Ex. 2: Diffie-Hellman pairs**
