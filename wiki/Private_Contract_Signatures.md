@@ -36,10 +36,14 @@ composable, interactive zero-knowledge proof schemes.
 Scheme
 ------
 
-PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*)∧Schnorr<sub>*A*</sub>))(*H*(*g*<sup>*s*</sup>, *m*))
- with s random.
+Traditionally, PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
 
-Why not try
+  
+g^s,H(g^s,m),\\left((\\textrm{CCE}^T(0,n)\\wedge\\textrm{Schnorr}\_B)\\vee(\\textrm{CCE}^T(1,n)\\wedge\\textrm{Schnorr}\_A)\\right)(g^s,H(g^s,m))</math>
 
-PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=(CCE<sup>*T*</sup>(*B*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*A*,(Pub<sup>*A*</sup>,*v*)))(*H*(*g*<sup>*s*</sup>, *m*))
+with s random.
+
+Why not try PCS<sub>*B*</sub><sup>*A*</sup>(*m*) to be
+
+*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),(CCE<sup>*T*</sup>(*B*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*A*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random?
