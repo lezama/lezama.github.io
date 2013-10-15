@@ -299,5 +299,5 @@ Indeed, if Bob was honest it should be that
 Thus, a Schnorr signature of the message m is essence just the
 non-interactive version of the Schnorr identification protocol, i.e.
 
-(*H*(*g*<sup>*s*</sup>, *m*),Schnorr<sub>*B*</sub>(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)))
- with s random.
+NI(Schnorr<sub>*B*</sub>)(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+ with s random. In practice the first element of the triple is dropped.
