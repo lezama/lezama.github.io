@@ -215,8 +215,8 @@ He has passed the challenge *c*<sub>0</sub> thanks to his
 *w*<sub>0</sub>. He has passed the challenge *c*<sub>1</sub> because it
 was an easy challenge that he has himself chosen.
 
-In the case of the example of the Discrete Logarithm, there exists a
-simulator, so that this can be done. Indeed, to generate
+In the case of Schnorr<sub>*B*</sub>, there exists a simulator, so that
+this can be done. Indeed, to generate
 *a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> you:
 
 -   Pick *c*<sub>1</sub>, *r*<sub>1</sub>.
@@ -228,7 +228,7 @@ Indeed, you then have
 so that the run is valid.
 
 **Denote by (*P* ∨ *Q*)(*c*) the or composition of two protocols P and
-Q. under challenge c.**
+Q, under the divided up challenge c.**
 
 Non-interactive version
 -----------------------
