@@ -41,5 +41,5 @@ PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B
 
 Why not try
 
-$$\\textrm{PCS}\_B^A(m)=\\left(\\textrm{CCE}^T(\\textrm{Pub}^A,(\\textrm{Pub}^B,v))\\vee\\textrm{CCE}^T(\\textrm{Pub}^B,(g^{\\textrm{Pub}^A,v))\\right)(H(g^s,m))$$
+PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=(CCE<sup>*T*</sup>(Pub<sup>*A*</sup>,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(Pub<sup>*B*</sup>,(Pub<sup>*A*</sup>,*v*)))(*H*(*g*<sup>*s*</sup>, *m*))
  with s random?
