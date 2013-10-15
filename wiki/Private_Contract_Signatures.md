@@ -38,10 +38,8 @@ Scheme
 
 Traditionally, PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
 
-  
-g^s,H(g^s,m),\\left((\\textrm{CCE}^T(0,n)\\wedge\\textrm{Schnorr}\_B)\\vee(\\textrm{CCE}^T(1,n)\\wedge\\textrm{Schnorr}\_A)\\right)(g^s,H(g^s,m))</math>
-
-with s random.
+*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*)∧Schnorr<sub>*A*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+ with s random.
 
 Why not try PCS<sub>*B*</sub><sup>*A*</sup>(*m*) to be
 
