@@ -36,7 +36,7 @@ composable, interactive zero-knowledge proof schemes.
 Scheme
 ------
 
-PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=(CCE<sup>*T*</sup>(0, *n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1, *n*)∧Schnorr<sub>*A*</sub>)(*H*(*g*<sup>*s*</sup>, *m*))
+PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=((CCE<sup>*T*</sup>(0, *n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1, *n*)∧Schnorr<sub>*A*</sub>))(*H*(*g*<sup>*s*</sup>, *m*))
  with s random.
 
 Why not try
