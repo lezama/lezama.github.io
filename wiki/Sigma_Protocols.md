@@ -155,8 +155,9 @@ honest it should be that
 
 *u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
 
-**Denote by (*a*, *c*)↦CCD<sup>*T*</sup>(*m*, *n*)(*c*) the response of
-this protocol, done towards with mask a and under challenge c.**
+**Denote by (*a*, *c*)↦CCD<sup>*T*</sup>(*m*, *n*)(*a*, *c*) the
+response of this protocol, done towards with mask a and under challenge
+c.**
 
 Composability
 -------------
