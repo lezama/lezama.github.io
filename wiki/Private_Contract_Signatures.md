@@ -68,7 +68,7 @@ A signature SIG<sub>*i*</sub>(*m*) is a pair
 (SPCS(*m*),USPCS<sub>*i*</sub>(*m*)).
  Notice that:
 
--   No step discloses Priv<sub>*P*<sub>*i*</sub></sub></math>.
+-   No step discloses Priv<sub>*P*<sub>*i*</sub></sub>.
 -   Yet is constitutes a proof that
     *v* = {*m*}<sub>Pub<sup>*T*</sup></sub> with ephemeral key
     Priv<sub>*P*<sub>*i*</sub></sub>, which amounts to signing m.
