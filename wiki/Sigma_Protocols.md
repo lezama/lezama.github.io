@@ -269,9 +269,9 @@ honest it should be that
 *v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *a*
 .
 
-**In general,
-(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*P*(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)))
-denotes the non-interactive version of P.**
+**Denote by
+NI(*P*)(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)) = (*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*P*(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)))
+the non-interactive version of P.**
 
 Schnorr signatures
 ------------------
