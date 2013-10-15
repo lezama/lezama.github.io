@@ -99,9 +99,9 @@ it should be that
 
 Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
 
--   Public input *m* and *m*′=(*u*, *v*).
+-   Public input *m* and *n* = (*u*, *v*).
 -   Agreed relation
-    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sup>*T*</sup></sub>
+    ((*m*, *n*),*w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ *n* = {*m*}<sub>Pub<sup>*T*</sup></sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") with ephemeral key *w*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -122,16 +122,16 @@ if Bob was honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
-**Denote by *c* ↦ CCE<sup>*T*</sup>(*m*, *m*′)(*c*) this protocol, under
+**Denote by *c* ↦ CCE<sup>*T*</sup>(*m*, *n*)(*c*) this protocol, under
 challenge c.**
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
 Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
 
--   Public input *m* and *m*′=(*u*, *v*).
+-   Public input *m* and *n* = (*u*, *v*).
 -   Agreed relation
-    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sup>*T*</sup></sub>
+    ((*m*, *n*),*w*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ *n* = {*m*}<sub>Pub<sup>*T*</sup></sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") for Trent.
 -   Private input *x* = Priv<sub>*T*</sub>.
 -   Trent will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -154,7 +154,7 @@ honest it should be that
 
 *u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
 
-**Denote by *c* ↦ CCD<sup>*T*</sup>(*m*, *m*′)(*c*) this protocol, under
+**Denote by *c* ↦ CCD<sup>*T*</sup>(*m*, *n*)(*c*) this protocol, under
 challenge c.**
 
 Composability
