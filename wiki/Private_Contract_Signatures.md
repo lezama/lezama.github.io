@@ -32,3 +32,14 @@ encryption and signature schemes.
 
 Outline of [Sigma protocols](/wiki/Sigma_Protocols "wikilink"), which are
 composable, interactive zero-knowledge proof schemes.
+
+Scheme
+------
+
+PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=(CCE<sup>*T*</sup>(0, *n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1, *n*)∧Schnorr<sub>*A*</sub>)(*H*(*g*<sup>*s*</sup>, *m*))
+ with s random.
+
+Why not try
+
+PCS<sub>*B*</sub><sup>*A*</sup>(*m*)=(CCE<sup>*T*</sup>(0, (*g*<sub>*B*</sub><sup>Priv</sup>, *v*))(*H*(*g*<sup>*s*</sup>, *m*))
+ with s random?
