@@ -36,42 +36,42 @@ composable, interactive zero-knowledge proof schemes.
 Simplified scheme
 -----------------
 
-An SPCS<sub>*A**B*</sub>(*m*) is
+An SPCS(*m*) is
 
-NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*A*</sup>,*v*))∨CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(⋁<sub>*i*</sub>CCE<sup>*T*</sup>(*m*,(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random. Intuitively:
 
 -   It constitutes a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
     under [ElGamal](/wiki/ElGamal "wikilink").
 -   In order to provide such a proof one needs to have the ephemeral
     key used.
--   It also constitutes a proof that the ephemeral key used is either
-    Alice's or Bob's private key.
+-   It also constitutes a proof that the ephemeral key was one of
+    {Priv<sup>*P*<sub>*i*</sub></sup>}.
 -   Thus, whoever has done it, has admittedly signed m.
--   But in order to know whom of Alice or Bob has signed, one needs a
+-   But in order to which *P*<sub>*i*</sub> has signed, one needs a
     proof of which of private keys was used.
 
-Thus unravel it, we need USPCS<sub>*B*</sub>(*m*)
+Thus unravel it, we need USPCS<sub>*i*</sub>(*m*)
 
-NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCD<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
+NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*T*</sup>(*m*,(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
  with s' random. Intuitively:
 
 -   It constitutes a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
     under [ElGamal](/wiki/ElGamal "wikilink").
 -   In order to provide such a proof one need to either have
-    Priv<sub>*B*</sub> used, or have Priv<sub>*T*</sub>.
+    Priv<sub>*P*<sub>*i*</sub></sub> used, or have Priv<sub>*T*</sub>.
 -   In any case it constitutes a proof that the ephemeral key used was
-    Bob's private key.
+    *P*<sub>*i*</sub>'s private key.
 
-A signature SIG<sub>*B*</sub>(*m*) is a pair
+A signature SIG<sub>*i*</sub>(*m*) is a pair
 
-(SPCS<sub>*B*</sub>(*m*),USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)).
+(SPCS(*m*),USPCS<sub>*i*</sub>(*m*)).
  Notice that:
 
--   No step discloses Priv<sub>*B*</sub>.
+-   No step discloses Priv<sub>*P*<sub>*i*</sub></sub></math>.
 -   Yet is constitutes a proof that
     *v* = {*m*}<sub>Pub<sup>*T*</sup></sub> with ephemeral key
-    Priv<sub>*B*</sub>, which amounts to signing m.
+    Priv<sub>*P*<sub>*i*</sub></sub>, which amounts to signing m.
 
 Normal scheme
 -------------
