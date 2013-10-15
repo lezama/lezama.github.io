@@ -39,7 +39,12 @@ Simplified scheme
 An SPCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
 
 NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*m*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
- with s random.
+ with s random. Intuitively,
+
+-   Bob provides a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
+    under [ElGamal](/wiki/ElGamal "wikilink").
+-   But he leaves ambiguous whether the ephemeral key used is his
+    or Alice's.
 
 To unravel it, we need USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)
 
