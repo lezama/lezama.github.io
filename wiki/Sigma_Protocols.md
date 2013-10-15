@@ -167,7 +167,7 @@ Fix *g*, *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
 -   Agreed relation
     (*n*, *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup> ⇔ *n* = {1}<sub>Pub<sup>*T*</sup></sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") with ephemeral key *w*.
--   Private input *w* = Priv<sup>*B*</sup></math>.
+-   Private input *w* = Priv<sup>*B*</sup>.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
 -   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
 
