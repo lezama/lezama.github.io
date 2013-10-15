@@ -40,7 +40,9 @@ that they meet the [Decisional
 Diffie-Hellman](http://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption)
 assumption; but there are standard techniques for doing that.
 
-**Ex. 1: Schnorr identification protocol** Fix *g* an integer.
+**Ex. 1: Schnorr identification protocol**
+
+Fix *g* an integer.
 
 -   Public input *v* = *P**u**b**K**B*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
@@ -60,11 +62,13 @@ The protocol has three rounds:
 should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
- **Denote by Schnorr<sub>*B*</sub>(*c*) a run of this sigma protocol by
-prover B under challenge c.**
+ **Denote by Schnorr<sub>*B*</sub>(*c*) a run of this protocol by prover
+B under challenge c.**
 
-**Ex. 2: Diffie-Hellman pairs** Fix *g* and *h* integers. The powers of
-*h* form a subgroup *H* inside the group *Z*<sub>*p*</sub>.
+**Ex. 2: Diffie-Hellman pairs**
+
+Fix *g* and *h* integers. The powers of *h* form a subgroup *H* inside
+the group *Z*<sub>*p*</sub>.
 
 -   Public input *u* ∈ *G*, *v* ∈ *H*.
 -   Agreed relation
@@ -92,9 +96,9 @@ it should be that
 
 Fix *g* and *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* integers.
 
--   Public input (*m*, *u*, *v*).
+-   Public input *m* and *m*′=(*u*, *v*).
 -   Agreed relation
-    ((*m*, *u*, *v*),*w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
+    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") with ephemeral key *w*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -113,16 +117,17 @@ The protocol has three rounds:
 if Bob was honest it should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
- and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*. **We
-denote by CCE(m,m') a run of this protocol.**
+ and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
+
+**Denote by *C**C**E*<sub>*T*</sub>(*m*, *m*′) a run of this protocol.**
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
 Fix *g* and *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* integers.
 
--   Public input (*m*, *u*, *v*).
+-   Public input *m* and *m*′=(*u*, *v*).
 -   Agreed relation
-    ((*m*, *u*, *v*),*x*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
+    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") for Trent.
 -   Private input *x* = *P**r**i**v**K**T*.
 -   Trent will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -144,7 +149,8 @@ honest it should be that
  and
 
 *u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
- **We denote by CCD(m,m') a run of this protocol.**
+
+**Denote by *C**C**D*<sub>*T*</sub>(*m*, *m*′) a run of this protocol.**
 
 Composability
 -------------
