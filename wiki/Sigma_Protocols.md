@@ -29,8 +29,8 @@ valid. This explains what the last two rounds are for. The first round
 is there out of technical necessity: Bob chooses this *a* as a mask for
 passing the challenge without disclosing *w*.
 
-Building blocks
----------------
+Examples
+--------
 
 Here are examples of Sigma protocols based on the hardness of Discrete
 Logarithms. Fix *p* a prime and *g* an integer. The powers of *g* form a
@@ -109,13 +109,13 @@ The protocol has three rounds:
 *B* → *A* : *r* = *w**c* + *s*, *r* = *w**c* + *s*
  Alice validates Bob's response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
-*g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*′</sup>*a*′. Indeed,
+*g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′. Indeed,
 if Bob was honest it should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
-**Ex. 4: Proof of cyphertext content by decrypter (under construction)**
+**Ex. 4: Proof of cyphertext content by decrypter**
 
 Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
