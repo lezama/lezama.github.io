@@ -40,7 +40,7 @@ that they meet the [Decisional
 Diffie-Hellman](http://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption)
 assumption; but there are standard techniques for doing that.
 
-**Ex. 1: Schnorr identification protocol**
+**Ex. 1: Schnorr identification protocol** Fix *g* an integer.
 
 -   Public input *v* = *P**u**b**K**B*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
@@ -61,10 +61,8 @@ should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *v*<sup>*c*</sup>*a*
 
-**Ex. 2: Diffie-Hellman pairs**
-
-Fix another *h* an integer. The powers of *h* form a subgroup *H* inside
-the group *Z*<sub>*p*</sub>.
+**Ex. 2: Diffie-Hellman pairs** Fix *g* and *h* integers. The powers of
+*h* form a subgroup *H* inside the group *Z*<sub>*p*</sub>.
 
 -   Public input *u* ∈ *G*, *v* ∈ *H*.
 -   Agreed relation
@@ -90,7 +88,7 @@ it should be that
 
 **Ex. 3: Proof of cyphertext content by encrypter**
 
-Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
+Fix *g* and *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* integers.
 
 -   Public input (*m*, *u*, *v*).
 -   Agreed relation
@@ -117,11 +115,11 @@ if Bob was honest it should be that
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
-Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
+Fix *g* and *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* integers.
 
 -   Public input (*m*, *u*, *v*).
 -   Agreed relation
-    $((m,u,v),x)\\in R \\Leftrightarrow \\exist w, u=g^w \\wedge v={g^x}^w m  \\Leftrightarrow (u,v)=\\{m\\}\_{PubKT}$
+    ((*m*, *u*, *v*),*x*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>*P**u**b**K**T*</sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") for Trent.
 -   Private input *x* = *P**r**i**v**K**T*.
 -   Trent will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -129,11 +127,11 @@ Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
 
 The protocol has three rounds:
 
-*T* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*g*<sup>*w*</sup><sup>*s*′</sup>
+*T* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*u*<sup>*s*′</sup>
 
 *A* → *T* : *c*
 
-*T* → *A* : *r* = *w**x* + *s*
+*T* → *A* : *r* = *x**c* + *s*
  Alice validates Trent's response by checking that
 *g*<sup>*r*</sup> = *h*<sup>*c*</sup>*a* and that
 *u*<sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′. Indeed, if Bob was
@@ -142,7 +140,7 @@ honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*x*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *h*<sup>*c*</sup>*a*.
  and
 
-*u*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*x**c*</sup>*g*<sup>*w*</sup><sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
+*u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
 
 Composability
 -------------
