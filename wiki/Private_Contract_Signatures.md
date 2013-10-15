@@ -43,12 +43,12 @@ NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*m*,(Pub<s
 
 To unravel it, we need USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)
 
-NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCD<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
- with s random.
+NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*))∨CCD<sup>*T*</sup>(*m*,(Pub<sup>*B*</sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
+ with s' random.
 
 A signature SIG<sub>*B*</sub><sup>*A*</sup>(*m*) is a pair
 
-SPCS<sub>*B*</sub><sup>*A*</sup>(*m*),USPCS<sub>*B*</sub><sup>*A*</sup>(*m*).
+(SPCS<sub>*B*</sub><sup>*A*</sup>(*m*),USPCS<sub>*B*</sub><sup>*A*</sup>(*m*)).
 
 Normal scheme
 -------------
