@@ -47,7 +47,7 @@ assumption; but there are standard techniques for doing that.
 
 Fix *g* an integer.
 
--   Public input *v* = Pub<sub>*B*</sub>.
+-   Public input *v* = Pub<sup>*B*</sup>.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
 -   Private input *w* = Priv<sub>*B*</sub>.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
@@ -97,11 +97,11 @@ it should be that
 
 **Ex. 3: Proof of cyphertext content by encrypter**
 
-Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sub>*T*</sub> integers.
+Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
 
 -   Public input *m* and *m*′=(*u*, *v*).
 -   Agreed relation
-    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sub>*T*</sub></sub>
+    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *u* = *g*<sup>*w*</sup> ∧ *v* = *g*<sup>*x*</sup><sup>*w*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sup>*T*</sup></sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") with ephemeral key *w*.
 -   Private input *w*.
 -   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -122,16 +122,16 @@ if Bob was honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
-**Denote by *c* ↦ CCE<sub>*T*</sub>(*m*, *m*′)(*c*) this protocol, under
+**Denote by *c* ↦ CCE<sup>*T*</sup>(*m*, *m*′)(*c*) this protocol, under
 challenge c.**
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
-Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sub>*T*</sub> integers.
+Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
 
 -   Public input *m* and *m*′=(*u*, *v*).
 -   Agreed relation
-    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sub>*T*</sub></sub>
+    ((*m*, (*u*, *v*)), *w*)∈*R* ⇔ *v* = *u*<sup>*x*</sup>*m* ⇔ (*u*, *v*)={*m*}<sub>Pub<sup>*T*</sup></sub>
     under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") for Trent.
 -   Private input *x* = Priv<sub>*T*</sub>.
 -   Trent will need some random *s* ∈ *Z*<sub>*p*</sub>.
@@ -154,7 +154,7 @@ honest it should be that
 
 *u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
 
-**Denote by *c* ↦ CCD<sub>*T*</sub>(*m*, *m*′)(*c*) this protocol, under
+**Denote by *c* ↦ CCD<sup>*T*</sup>(*m*, *m*′)(*c*) this protocol, under
 challenge c.**
 
 Composability
@@ -272,15 +272,15 @@ Let us further modify the above, and say that the challenge that Bob
 will put to himself is to be fabricated based upon some public *m*
 instead of *v*.
 
--   Public input *m* a message and *v* = *P**u**b**K**B*.
+-   Public input *m* a message and *v* = Pub<sup>*B*</sup>.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
--   Private input *w* = *P**r**i**v**K**B*.
+-   Private input *w* = Priv<sub>*B*</sub>.
 -   Bob will need some random ephemeral *s* ∈ *Z*<sub>*p*</sub>.
 
   
 Bob computes *c* = *H*(*g*<sup>*s*</sup>, *m*) and *r* = *s* + *w**c*.
 
-Bob signs *m* ∈ *G* as *S**I**G*<sub>*B*</sub>(*m*)=(*c*, *r*).
+Bob signs *m* ∈ *G* as (*c*, *r*).
 
 Alice verifies (*c*, *r*) checking that *c* = *H*(*a*, *m*) with
 *a* = *v*<sup>−*c*</sup>*g*<sup>*r*</sup>.
