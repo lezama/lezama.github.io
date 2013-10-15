@@ -22,7 +22,7 @@ Alice needs a random ephemeral key *w*.
 
   
 Alice encrypts *m* ∈ *G* as
-{*m*}<sub>*P**u**b**K**B*</sub> = (*g*<sup>*w*</sup>, *g*<sup>*x*</sup><sup>*w*</sup>*m*).
+{*m*}<sub>Pub<sub>*B*</sub></sub> = (*g*<sup>*w*</sup>, *g*<sup>*x*</sup><sup>*w*</sup>*m*).
 
 Bob decrypts (*u*, *v*) as *v*/*u*<sup>*x*</sup>.
 
