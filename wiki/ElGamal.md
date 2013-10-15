@@ -12,8 +12,8 @@ Diffie-Hellman](http://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_a
 assumption; but there are standard techniques for doing that.
 
 Say Bob generates
-*P**r**i**v**K**B* = *x*, *P**u**b**K**B* = *g*<sup>*x*</sup> and makes
-the latter public.
+Priv<sub>*B*</sub> = *x*, Pub<sub>*B*</sub> = *g*<sup>*x*</sup> and
+makes the latter public.
 
 ElGamal encryption
 ------------------
