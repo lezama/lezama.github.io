@@ -166,13 +166,11 @@ If there was some for *R*<sub>0</sub> and *R*<sub>1</sub>, then yes. It
 suffices to combine the parallel run of both protocols into one, as
 tuples.
 
-'''Denote by
-$P \\wedge Q &lt;\\math&gt; the and composition of two protocols P and Q.'''
+**Denote by *P* ∧ *Q* the and composition of two protocols P and Q.**
 
-
-Now, say Bob pretends to have one of &lt;math&gt;w\_0$ or
-*w*<sub>1</sub>, and does not want to disclose it, not tell which one it
-is. Is there a Sigma protocol for this new relation
+Now, say Bob pretends to have one of *w*<sub>0</sub> or *w*<sub>1</sub>,
+and does not want to disclose it, not tell which one it is. Is there a
+Sigma protocol for this new relation
 *R*<sub>0</sub> ∨ *R*<sub>1</sub> = {(*v*<sub>0</sub>, *v*<sub>1</sub>),(*w*<sub>0</sub>, *w*<sub>1</sub>) | (*v*<sub>0</sub>, *w*<sub>0</sub>)∈*R*<sub>0</sub> ∨ (*v*<sub>1</sub>, *w*<sub>1</sub>)∈*R*<sub>1</sub>}?
 If there was some for *R*<sub>0</sub> and *R*<sub>1</sub>, then
 sometimes yes. This sometimes is related to Bob's ability to simulate,
@@ -226,14 +224,17 @@ Indeed, you then have
 *g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
 so that the run is valid.
 
-'''Denote by
-$P \\vee Q &lt;\\math&gt; the or composition of two protocols P and Q.'''
+**Denote by *P* ∨ *Q* the or composition of two protocols P and Q.**
 
-== Non-interactive version ==
+Non-interactive version
+-----------------------
 
-Instead of doing the Sigma protocol in three rounds, we could just do it in one round, by musing the Fiat-Shamir heuristics. The idea is that Bob challenges himself with something that he does not really control, namely &lt;math&gt;H(a,v)$,
-where *H* is a hash function like SHA2. For instance, let us apply this
-procedure to the Schnorr identification protocol. We get:
+Instead of doing the Sigma protocol in three rounds, we could just do it
+in one round, by musing the Fiat-Shamir heuristics. The idea is that Bob
+challenges himself with something that he does not really control,
+namely *H*(*a*, *v*), where *H* is a hash function like SHA2. For
+instance, let us apply this procedure to the Schnorr identification
+protocol. We get:
 
 -   Public input *m* = *v* ∈ *G*.
 -   Agreed relation (*v*, *w*)∈*R* ⇔ *g*<sup>*w*</sup> = *v*.
