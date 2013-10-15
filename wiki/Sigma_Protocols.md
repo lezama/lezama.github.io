@@ -115,6 +115,33 @@ if Bob was honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
+**Ex. 4: Proof of cyphertext encryption by decrypter**
+
+Fix *h* = *g*<sup>*x*</sup> = *P**u**b**K**T* an integer.
+
+-   Public input (*m*, *u*, *v*).
+-   Agreed relation
+    $((m,u,v),x)\\in R \\Leftrightarrow \\exist w, u=g^w \\wedge v={g^x}^w m  \\Leftrightarrow (u,v)=\\{m\\}\_{PubKT}$
+    under [ ElGamal](/wiki/ElGamalSchnorr "wikilink") for Trent.
+-   Private input *x* = *P**r**i**v**K**T*.
+-   Bob will need some random *s* ∈ *Z*<sub>*p*</sub>.
+-   Alice will need some random *c* ∈ *Z*<sub>*p*</sub>.
+
+The protocol has three rounds:
+
+*B* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*g*<sup>*x*</sup><sup>*s*′</sup>
+
+*A* → *B* : *c*, *c*′
+
+*B* → *A* : *r* = *w**c* + *s*, *r*′=*w**c*′+*s*′
+ Alice validates Bob response by checking that
+*g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
+*g*<sup>*x*</sup><sup>*r*′</sup> = (*v*/*m*)<sup>*c*′*a*′</sup>. Indeed,
+if Bob was honest it should be that
+
+*g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
+ and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
+
 Composability
 -------------
 
