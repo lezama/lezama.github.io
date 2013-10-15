@@ -289,5 +289,5 @@ Indeed, if Bob was honest it should be that
 *v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*w**c* + *s*</sup> = *g*<sup>*s*</sup> = *a*.
 
 Thus, a Schnorr signature is essence just some
-(*a*, *r*, *s*)=Schnorr(*H*(*a*, *m*)) with s random, although often the
-a is dropped.
+(*g*<sup>*s*</sup>, *H*(*a*, *m*),*s* + *w**c*)=Schnorr(*H*(*g*<sup>*s*</sup>, *m*)),
+with s random. In practice the first element of the triple gets dropped.
