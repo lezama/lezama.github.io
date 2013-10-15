@@ -38,12 +38,12 @@ Scheme
 
 Traditionally, PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
 
-*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*)∧Schnorr<sub>*A*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*)∧Schnorr<sub>*A*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random.
 
 Why not try PCS<sub>*B*</sub><sup>*A*</sup>(*m*) to be
 
-*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),(CCE<sup>*T*</sup>(*B*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*A*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(CCE<sup>*T*</sup>(*B*,(Pub<sup>*B*</sup>,*v*))∨CCE<sup>*T*</sup>(*A*,(Pub<sup>*A*</sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random?
 
 To do
