@@ -84,13 +84,13 @@ The protocol has three rounds:
 
 *B* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*g*<sup>*s*′</sup>
 
-*A* → *B* : *c*, *c*′
+*A* → *B* : *c*
 
-*B* → *A* : *r* = *w**c* + *s*, *r*′=*w**c*′+*s*′
+*B* → *A* : *r* = *w**c* + *s*
  Alice validates Bob's response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
-*h*<sup>*r*′</sup> = *v*<sup>*c*′</sup>*a*′. Indeed, if Bob was honest
-it should be that
+*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*′. Indeed, if Bob was honest it
+should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* with *v*.
@@ -113,7 +113,7 @@ The protocol has three rounds:
 
 *A* → *B* : *c*
 
-*B* → *A* : *r* = *w**c* + *s*, *r* = *w**c* + *s*
+*B* → *A* : *r* = *w**c* + *s*
  Alice validates Bob's response by checking that
 *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and that
 *g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′. Indeed,
