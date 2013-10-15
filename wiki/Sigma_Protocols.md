@@ -288,6 +288,9 @@ Alice verifies (*c*, *r*) checking that *c* = *H*(*a*, *m*) with
 Indeed, if Bob was honest it should be that
 *v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*w**c* + *s*</sup> = *g*<sup>*s*</sup> = *a*.
 
-Thus, a Schnorr signature is essence just some
-(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*s* + *w**H*(*g*<sup>*s*</sup>, *m*)) = Schnorr(*H*(*g*<sup>*s*</sup>, *m*)),
-with s random. In practice the first element of the triple gets dropped.
+Thus, a Schnorr signature of the message m is essence just the
+non-interactive version of the Schnorr identification protocol, i.e.
+
+(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*s* + *w**H*(*g*<sup>*s*</sup>, *m*)) = Schnorr(*H*(*g*<sup>*s*</sup>, *m*))
+ with s random. In practice the first element of the triple gets
+dropped.
