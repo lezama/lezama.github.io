@@ -119,7 +119,8 @@ if Bob was honest it should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* = *g*<sup>*x*</sup> with *v*′=*v*/*m*.
 
-**Denote by CCE<sub>*T*</sub>(*m*, *m*′) a run of this protocol.**
+**Denote by CCE<sub>*T*</sub>(*m*, *m*′)(*c*) a run of this protocol
+under challenge c.**
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
@@ -150,7 +151,8 @@ honest it should be that
 
 *u*<sup>*r*</sup> = *u*<sup>*x**c*</sup>*u*<sup>*s*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′.
 
-**Denote by CCD<sub>*T*</sub>(*m*, *m*′) a run of this protocol.**
+**Denote by CCD<sub>*T*</sub>(*m*, *m*′)(*c*) a run of this protocol
+under challenge c.**
 
 Composability
 -------------
