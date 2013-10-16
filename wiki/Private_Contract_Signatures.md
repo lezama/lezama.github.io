@@ -52,8 +52,8 @@ NI(⋁<sub>*i* ∈ *S*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*<
 -   But in order to which *P*<sub>*i*</sub> has signed, one needs a
     proof of which of private keys was used.
 
-To unravel it, means to convert SPCS(*m*) into the final signature
-SIG<sub>*i* ∈ *S*</sub>(*m*):
+To unravel it, means to convert SPCS<sub>*S*</sub>(*m*) into the final
+signature SIG<sub>*i* ∈ *S*</sub>(*m*):
 
 NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
  with s' random. Intuitively:
