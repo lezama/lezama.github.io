@@ -68,8 +68,8 @@ NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*
     signing m..
 -   No step discloses Priv<sub>*P*<sub>*i*</sub></sub>.
 
-Normal scheme
--------------
+Standard scheme
+---------------
 
 Normally, a PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
 
