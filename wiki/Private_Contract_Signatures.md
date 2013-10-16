@@ -36,9 +36,9 @@ composable, interactive zero-knowledge proof schemes.
 Simplified scheme
 -----------------
 
-An SPCS(*m*) is
+An SPCS<sub>*S*</sub>(*m*) is
 
-NI(⋁<sub>*i*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(⋁<sub>*i* ∈ *S*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random. Intuitively:
 
 -   It constitutes a proof that
@@ -47,13 +47,13 @@ NI(⋁<sub>*i*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,
 -   In order to provide such a proof one needs to have the ephemeral
     key used.
 -   It also constitutes a proof that the ephemeral key was one of
-    {Priv<sup>*P*<sub>*i*</sub></sup>}.
+    {Priv<sup>*P*<sub>*i*</sub></sup>}<sub>*i* ∈ *S*</sub>.
 -   Thus, whoever has done it, has admittedly signed m.
 -   But in order to which *P*<sub>*i*</sub> has signed, one needs a
     proof of which of private keys was used.
 
 To unravel it, means to convert SPCS(*m*) into the final signature
-SIG<sub>*i*</sub>(*m*):
+SIG<sub>*i* ∈ *S*</sub>(*m*):
 
 NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
  with s' random. Intuitively:
