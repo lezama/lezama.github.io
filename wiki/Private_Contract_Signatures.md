@@ -25,7 +25,7 @@ object is such that:
 -   It can be created by Pi and, in the eyes of an external party, faked
     by Pj;
 -   Pi and T are able to convert it into
-    SIG<sub>*i* ∈ *S*</sub><sup>*T*</sup>(*m*), and Pj can be convinced
+    SIG<sub>*i*</sub><sup>*T*</sup>(*m*), and Pj can be convinced
     of this.
 
 Some Cryptography
