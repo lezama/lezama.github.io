@@ -38,11 +38,12 @@ Simplified scheme
 
 An SPCS(*m*) is
 
-NI(⋁<sub>*i*</sub>CCE<sup>*T*</sup>(*m*,(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(⋁<sub>*i*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random. Intuitively:
 
--   It constitutes a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
-    under [ElGamal](/wiki/ElGamal "wikilink").
+-   It constitutes a proof that
+    *v* = {*H*(*m*)}<sub>Pub<sup>*T*</sup></sub> under
+    [ElGamal](/wiki/ElGamal "wikilink").
 -   In order to provide such a proof one needs to have the ephemeral
     key used.
 -   It also constitutes a proof that the ephemeral key was one of
@@ -51,27 +52,21 @@ NI(⋁<sub>*i*</sub>CCE<sup>*T*</sup>(*m*,(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))
 -   But in order to which *P*<sub>*i*</sub> has signed, one needs a
     proof of which of private keys was used.
 
-Thus unravel it, we need USPCS<sub>*i*</sub>(*m*)
+To unravel it, means to convert SPCS(*m*) into the final signature
+SIG<sub>*i*</sub>(*m*):
 
-NI(CCE<sup>*T*</sup>(*m*,(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*T*</sup>(*m*,(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
+NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
  with s' random. Intuitively:
 
--   It constitutes a proof that *v* = {*m*}<sub>Pub<sup>*T*</sup></sub>
-    under [ElGamal](/wiki/ElGamal "wikilink").
--   In order to provide such a proof one need to either have
-    Priv<sub>*P*<sub>*i*</sub></sub> used, or have Priv<sub>*T*</sub>.
--   In any case it constitutes a proof that the ephemeral key used was
-    *P*<sub>*i*</sub>'s private key.
-
-A signature SIG<sub>*i*</sub>(*m*) is a pair
-
-(SPCS(*m*),USPCS<sub>*i*</sub>(*m*)).
- Notice that:
-
+-   In order to accomplish the conversion one needs to either have
+    Priv<sub>*P*<sub>*i*</sub></sub> used as ephemeral key, or to have
+    Priv<sub>*T*</sub>.
+-   It constitutes a proof that
+    *v* = {*H*(*m*)}<sub>Pub<sup>*T*</sup></sub> under
+    [ElGamal](/wiki/ElGamal "wikilink") with ephemeral key
+    Priv<sub>*P*<sub>*i*</sub></sub>, which amounts to *P*<sub>*i*</sub>
+    signing m..
 -   No step discloses Priv<sub>*P*<sub>*i*</sub></sub>.
--   Yet is constitutes a proof that
-    *v* = {*m*}<sub>Pub<sup>*T*</sup></sub> with ephemeral key
-    Priv<sub>*P*<sub>*i*</sub></sub>, which amounts to signing m.
 
 Normal scheme
 -------------
