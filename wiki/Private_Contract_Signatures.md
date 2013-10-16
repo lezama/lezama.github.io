@@ -18,6 +18,16 @@ implement them.
 Specifications
 --------------
 
+SPCS<sub>*S*</sub><sup>*T*</sup>(*m*) denotes a Private Contract
+Signatures by Pi in S on contract m with Trusted Third Party T. The
+object is such that:
+
+-   It can be created by Pi and, in the eyes of an external party, faked
+    by Pj;
+-   Pi and T are able to convert it into
+    SIG<sub>*i* ∈ *S*</sub><sup>*T*</sup>(*m*), and Pj can be convinced
+    of this.
+
 Some Cryptography
 -----------------
 
@@ -33,7 +43,7 @@ composable, interactive zero-knowledge proof schemes.
 Simplified scheme
 -----------------
 
-An SPCS<sub>*S*</sub>(*m*) is
+An SPCS<sub>*S*</sub><sup>*T*</sup>(*m*) is
 
 NI(⋁<sub>*i* ∈ *S*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random. Intuitively:
@@ -49,8 +59,8 @@ NI(⋁<sub>*i* ∈ *S*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*<
 -   But in order to which *P*<sub>*i*</sub> has signed, one needs a
     proof of which of private keys was used.
 
-To unravel it, means to convert SPCS<sub>*S*</sub>(*m*) into the final
-signature SIG<sub>*i* ∈ *S*</sub>(*m*):
+To unravel it, means to convert SPCS<sub>*S*</sub><sup>*T*</sup>(*m*)
+into the final signature SIG<sub>*i* ∈ *S*</sub><sup>*T*</sup>(*m*):
 
 NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*)))(*g*<sup>*s*′</sup>, *H*(*g*<sup>*s*′</sup>, *m*))
  with s' random. Intuitively:
