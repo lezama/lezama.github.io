@@ -74,17 +74,20 @@ NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*
     signing m.
 -   No step discloses Priv<sub>*P*<sub>*i*</sub></sub>.
 
-This scheme is simpler than the original scheme. It has a drawback,
-however. Indeed, by requiring that Priv<sub>*P*<sub>*i*</sub></sub> be
-the ephemeral key for El Gammal encryption, we are imposing that the
-pairs
-(Priv<sub>*P*<sub>*i*</sub></sub>, Pub<sup>*P*<sub>*i*</sub></sup>) and
-(Priv<sub>*T*</sub>, Pub<sup>*T*</sup>) are based on the same
-Diffie-Hellman group. Altogether, this would mean that all pairs get
-generates with respect to the same group. This is non-traditional, and
-perhaps it weakens security? Nevertheless, notice that precise, fixed
-groups have been recommended for use, for instance in [RFC
-5114](http://tools.ietf.org/html/rfc5114#page-4).
+This scheme is simpler than the original scheme. It has weaknesses,
+however:
+
+-   By requiring that Priv<sub>*P*<sub>*i*</sub></sub> be the ephemeral
+    key for ElGamal encryption, we are imposing that the pairs
+    (Priv<sub>*P*<sub>*i*</sub></sub>, Pub<sup>*P*<sub>*i*</sub></sup>)
+    and (Priv<sub>*T*</sub>, Pub<sup>*T*</sup>) are based on the same
+    Diffie-Hellman group. Altogether, this would mean that all pairs get
+    generates with respect to the same group. This is non-traditional,
+    and perhaps it weakens security? Nevertheless, notice that precise,
+    fixed groups have been recommended for use, for instance in [RFC
+    5114](http://tools.ietf.org/html/rfc5114#page-4).
+-   The same ephemeral key Priv<sub>*P*<sub>*i*</sub></sub> is reused
+    over and over, which may weaken ElGamal?
 
 Standard scheme
 ---------------
