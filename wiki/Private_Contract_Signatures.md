@@ -50,14 +50,13 @@ NI(⋁<sub>*i* ∈ *S*</sub>CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*<
 
 -   It constitutes a proof that
     *v* = {*H*(*m*)}<sub>Pub<sup>*T*</sup></sub> under
-    [ElGamal](/wiki/ElGamal "wikilink").
+    [ElGamal](/wiki/ElGamal "wikilink"), with ephemeral key one of
+    {Priv<sup>*P*<sub>*i*</sub></sup>}<sub>*i* ∈ *S*</sub>.
 -   In order to provide such a proof one needs to have the ephemeral
     key used.
--   It also constitutes a proof that the ephemeral key was one of
-    {Priv<sup>*P*<sub>*i*</sub></sup>}<sub>*i* ∈ *S*</sub>.
 -   Thus, whoever has done it, has admittedly signed m.
--   But in order to which *P*<sub>*i*</sub> has signed, one needs a
-    proof of which of private keys was used.
+-   But in order to know which of the *P*<sub>*i*</sub> has signed, one
+    needs a proof of which of private keys was used.
 
 To unravel it, means to convert SPCS<sub>*S*</sub><sup>*T*</sup>(*m*)
 into the final signature SIG<sub>*i* ∈ *S*</sub><sup>*T*</sup>(*m*):
@@ -72,8 +71,21 @@ NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*
     *v* = {*H*(*m*)}<sub>Pub<sup>*T*</sup></sub> under
     [ElGamal](/wiki/ElGamal "wikilink") with ephemeral key
     Priv<sub>*P*<sub>*i*</sub></sub>, which amounts to *P*<sub>*i*</sub>
-    signing m..
+    signing m.
 -   No step discloses Priv<sub>*P*<sub>*i*</sub></sub>.
+
+This scheme is simpler than the original scheme. It has a drawback,
+however. Indeed, by requiring that Priv<sub>*P*<sub>*i*</sub></sub> be
+the ephemeral key for El Gammal encryption, we are imposing that the
+pairs
+(Priv<sub>*P*<sub>*i*</sub></sub>, Pub<sup>*P*<sub>*i*</sub></sup>) and
+(Priv<sub>*T*</sub>, Pub<sup>*T*</sup>) are based on the same
+Diffie-Hellman group. Altogether, this would mean that all pairs get
+generates with respect to the same group. This is non-traditional, and
+perhaps it weakens security? Nevertheless, notice that some groups have
+been recommended for use for instance in
+[http://tools.ietf.org/html/rfc5114\#page-4 RFC
+5114](http://tools.ietf.org/html/rfc5114#page-4_RFC_5114 "wikilink")
 
 Standard scheme
 ---------------
