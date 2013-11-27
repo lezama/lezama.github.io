@@ -74,8 +74,8 @@ NI(CCE<sup>*T*</sup>(*H*(*m*),(Pub<sup>*P*<sub>*i*</sub></sup>,*v*))∨CCD<sup>*
     signing m.
 -   No step discloses Priv<sub>*P*<sub>*i*</sub></sub>.
 
-This scheme is simpler than the original scheme. It has weaknesses,
-however:
+This scheme is simpler than the original scheme. It has dangerous
+weaknesses, however:
 
 -   By requiring that Priv<sub>*P*<sub>*i*</sub></sub> be the ephemeral
     key for ElGamal encryption, we are imposing that the pairs
@@ -87,7 +87,12 @@ however:
     fixed groups have been recommended for use, for instance in [RFC
     5114](http://tools.ietf.org/html/rfc5114#page-4).
 -   The same ephemeral key Priv<sub>*P*<sub>*i*</sub></sub> is reused
-    over and over, which may weaken ElGamal?
+    over and over, which means that the cyphertext is always
+    *H*(*m*)*g*<sup>Priv<sub>*P*<sub>*i*</sub></sub>Priv<sub>*T*</sub></sup>
+    but since *H*(*m*) is known, so is
+    *g*<sup>Priv<sub>*P*<sub>*i*</sub></sub>Priv<sub>*T*</sub></sup>,
+    and so the next time is immediately identified as the creator of
+    the SPCS.
 
 Standard scheme
 ---------------
