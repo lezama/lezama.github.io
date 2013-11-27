@@ -22,11 +22,11 @@ SPCS<sub>*S*</sub><sup>*T*</sup>(*m*) denotes a Private Contract
 Signatures by Pi in S on contract m with Trusted Third Party T. The
 object is such that:
 
--   It can be created by Pi and, in the eyes of an external party, faked
-    by Pj;
--   Pi, or T are able to convert it into
-    SIG<sub>*i*</sub><sup>*T*</sup>(*m*), and Pj can be convinced
-    of this.
+-   It can be created any of the Pi's in S and, in the eyes of an
+    external party, faked by any other of the Pj's in S;
+-   The creating Pi, or T, are able to convert it into
+    SIG<sub>*i*</sub><sup>*T*</sup>(*m*), and other Pj's can be
+    convinced of this.
 
 Some Cryptography
 -----------------
