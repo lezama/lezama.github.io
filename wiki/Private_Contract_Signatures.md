@@ -97,9 +97,6 @@ NI((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*
 To do
 -----
 
-There might be a pb with g having to be the same in Trent's and the
-Party's for the simplified scheme to work.
-
 Check duplication of a and c in and and or constructs.
 
 Check whether non-interactive CCE under ephemeral key PubB and challenge
