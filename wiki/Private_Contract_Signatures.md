@@ -82,8 +82,8 @@ pairs
 (Priv<sub>*T*</sub>, Pub<sup>*T*</sup>) are based on the same
 Diffie-Hellman group. Altogether, this would mean that all pairs get
 generates with respect to the same group. This is non-traditional, and
-perhaps it weakens security? Nevertheless, notice that some groups have
-been recommended for use for instance in [RFC
+perhaps it weakens security? Nevertheless, notice that precise, fixed
+groups have been recommended for use, for instance in [RFC
 5114](http://tools.ietf.org/html/rfc5114#page-4).
 
 Standard scheme
