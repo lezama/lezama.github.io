@@ -18,7 +18,7 @@ implement them.
 Specifications
 --------------
 
-SPCS<sub>*i*</sub><sup>*T*</sup>(*m*) denotes a Private Contract
+SPCS<sub>*S*</sub><sup>*T*</sup>(*m*) denotes a Private Contract
 Signatures by Pi in S on contract m with Trusted Third Party T. The
 object is such that:
 
