@@ -177,7 +177,7 @@ The protocol has three rounds:
 *T* → *A* : *r* = *x**c* + *s*
  Alice validates Trent's response by checking that
 *g*<sup>*r*</sup> = *h*<sup>*c*</sup>*a* and that
-*u*<sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′. Indeed, if Bob was
+*u*<sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′. Indeed, if Trent was
 honest it should be that
 
 *g*<sup>*r*</sup> = *g*<sup>*x*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *h*<sup>*c*</sup>*a*.
@@ -189,7 +189,7 @@ honest it should be that
 response of this protocol, done towards T with mask a and under
 challenge c.**
 
-Beware that B must not be left to freely choose the challenge, otherwise
+Beware that T must not be left to freely choose the challenge, otherwise
 he can generate valid triplets through the following simulator:
 
 -   Pick *c*, *r*.
