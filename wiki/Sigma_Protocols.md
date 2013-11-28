@@ -68,6 +68,15 @@ should be that
  **Denote by (*a*, *c*)↦Schnorr<sub>*B*</sub>(*a*, *c*) the response of
 this protocol, done by prover B with mask a and under challenge c.**
 
+Beware that B must not be left to freely choose the challenge, otherwise
+he can generate valid triplets through the following simulator:
+
+-   Pick *c*, *r*.
+-   Let *a* = *g*<sup>*r*</sup>*v*<sup>−*c*</sup>.
+
+Indeed, you then have *g*<sup>*r*</sup> = *v*<sup>*c*</sup>*a* so that
+the run is valid.
+
 **Ex. 2: Diffie-Hellman pairs**
 
 Fix *g* and *h* integers. The powers of *h* form a subgroup *H* inside
