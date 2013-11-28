@@ -136,7 +136,3 @@ weaknesses, however:
     *g*<sup>Priv<sub>*P*<sub>*i*</sub></sub>Priv<sub>*T*</sub></sup> in
     this scheme.
 
-To do
------
-
-Check duplication of a and c in and and or constructs.
