@@ -272,7 +272,7 @@ Non-interactive version
 -----------------------
 
 Instead of doing the Sigma protocol in three rounds, we could just do it
-in one round, by musing the Fiat-Shamir heuristics. The idea is that Bob
+in one round, by using the Fiat-Shamir heuristics. The idea is that Bob
 challenges himself with something that he does not really control,
 namely *H*(*a*, *m*), where *H* is a hash function like SHA2 and *m* is
 a public input, often just *v*. For instance, let us apply this
@@ -298,8 +298,13 @@ honest it should be that
 *v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *a*
 .
 
+Notice that is some Sigma protocols, such as those obtained by
+and-composition, we have *a* = (*a*<sub>1</sub>, *a*<sub>2</sub>, …) and
+*c* = (*c*<sub>1</sub>, *c*<sub>2</sub>, …), in which case we use
+*c* = (*c*<sub>1</sub> = *H*(*a*<sub>*i*</sub>, *m*),*c*<sub>2</sub> = *H*(*a*<sub>2</sub>, *m*),…).
+
 **Denote by
-NI(*P*)(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)) = (*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*P*(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)))
+NI(*P*)(*m*)=(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*P*(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)))
 the non-interactive version of P.**
 
 Schnorr signatures
