@@ -45,7 +45,7 @@ Standard scheme
 
 A PCS<sub>*S*</sub>(*m*) is
 
-NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>)(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random. Intuitively:
 
 -   It constitutes a proof that one of the Pi has passed the Schnorr
