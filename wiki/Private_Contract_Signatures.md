@@ -43,7 +43,7 @@ composable, interactive zero-knowledge proof schemes.
 Standard scheme
 ---------------
 
-A PCS<sub>*S*</sub>(*m*) is
+A private contract signature PCS<sub>*S*</sub>(*m*) is
 
 NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random. Intuitively:
@@ -56,6 +56,15 @@ NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</s
     has signed.
 -   In order to convert this into a signature by *P*<sub>*i*</sub>, one
     must prove that the cyphertext *n* has content the integer *i*.
+
+A private contract signature revealer RPCS<sub>*i*</sub>(*n*) is
+
+NI(CCE<sup>*T*</sup>(*i*,*n*)∧CCD<sup>*T*</sup>(*i*,*n*))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+ with s random. Intuitively:
+
+-   It constitutes a proof that the cyphertext *n* has content the
+    integer *i*.
+-   Either *P*<sub>*i*</sub> or *T* can produce this.
 
 Simplified scheme (Failed attempt)
 ----------------------------------
