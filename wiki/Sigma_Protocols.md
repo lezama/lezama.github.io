@@ -250,6 +250,12 @@ He has passed the challenge *c*<sub>0</sub> thanks to his
 *w*<sub>0</sub>. He has passed the challenge *c*<sub>1</sub> because it
 was an easy challenge that he has himself chosen.
 
+**Denote by (*a*, *c*)↦(*P* ∨ *Q*)(*a*, *c*) the response to the or
+composition of two protocols P and Q, under the divided up mask a and
+challenge c.**
+
+**Simulators**
+
 In the case of Schnorr<sub>*B*</sub>, there exists a simulator, so that
 this can be done. Indeed, to generate
 *a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> you:
@@ -261,10 +267,6 @@ this can be done. Indeed, to generate
 Indeed, you then have
 *g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
 so that the run is valid.
-
-**Denote by (*a*, *c*)↦(*P* ∨ *Q*)(*a*, *c*) the response to the or
-composition of two protocols P and Q, under the divided up mask a and
-challenge c.**
 
 Non-interactive version
 -----------------------
