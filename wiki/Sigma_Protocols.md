@@ -170,7 +170,7 @@ Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
 
 The protocol has three rounds:
 
-*T* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*u*<sup>*s*′</sup>
+*T* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*u*<sup>*s*</sup>
 
 *A* → *T* : *c*
 
