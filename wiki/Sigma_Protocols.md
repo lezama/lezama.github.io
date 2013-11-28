@@ -298,15 +298,16 @@ honest it should be that
 *v*<sup>−*c*</sup>*g*<sup>*r*</sup> = *g*<sup>−*w**c*</sup>*g*<sup>*w**c*</sup>*g*<sup>*s*</sup> = *a*
 .
 
+**Denote by
+NI(*P*)(*m*)=(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*P*(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)))
+the non-interactive version of P.**
+
 Notice that is some Sigma protocols, such as those obtained by
 and-composition, we have
 *a* = (*a*<sub>1</sub> = *g*<sub>1</sub><sup>*s*<sub>1</sub></sup>, *a*<sub>2</sub> = *g*<sub>2</sub><sup>*s*<sub>2</sub></sup>, …)
 and *c* = (*c*<sub>1</sub>, *c*<sub>2</sub>, …), in which case we use
-*c* = (*c*<sub>1</sub> = *H*(*a*<sub>*i*</sub>, *m*),*c*<sub>2</sub> = *H*(*a*<sub>2</sub>, *m*),…).
-
-**Denote by
-NI(*P*)(*m*)=(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*),*P*(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*)))
-the non-interactive version of P.**
+*c* = (*c*<sub>1</sub> = *H*(*a*<sub>*i*</sub>, *m*),*c*<sub>2</sub> = *H*(*a*<sub>2</sub>, *m*),…)
+for their non-interactive versions.
 
 Schnorr signatures
 ------------------
