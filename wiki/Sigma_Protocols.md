@@ -104,6 +104,16 @@ should be that
 *g*<sup>*r*</sup> = *g*<sup>*w*</sup><sup>*c*</sup>*g*<sup>*s*</sup> = *u*<sup>*c*</sup>*a*.
  and similarly for *h* with *v*.
 
+Beware that B must not be left to freely choose the challenge, otherwise
+he can generate valid triplets through the following simulator:
+
+-   Pick *c*, *r*.
+-   Let *a* = *g*<sup>*r*</sup>*u*<sup>−*c*</sup>,
+    *a*′=*g*<sup>*r*</sup>*v*<sup>−*c*</sup>.
+
+Indeed, you then have *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and
+*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a* so that the run is valid.
+
 **Ex. 3: Proof of cyphertext content by encrypter**
 
 Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
@@ -118,7 +128,7 @@ Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
 
 The protocol has three rounds:
 
-*B* → *A* : *a* = *g*<sup>*s*</sup>, *a* = *g*<sup>*x*</sup><sup>*s*</sup>
+*B* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*g*<sup>*x*</sup><sup>*s*</sup>
 
 *A* → *B* : *c*
 
