@@ -227,20 +227,6 @@ was an easy challenge that he has himself chosen.
 composition of two protocols P and Q, under the divided up mask a and
 challenge c.**
 
-**Simulators:**
-
-In the case of Schnorr<sub>*B*</sub>, there exists a simulator, so that
-this can be done. Indeed, to generate
-*a*<sub>1</sub>, *c*<sub>1</sub>, *r*<sub>1</sub> you:
-
--   Pick *c*<sub>1</sub>, *r*<sub>1</sub>.
--   Let
-    *a*<sub>1</sub> = *g*<sup>*r*<sub>1</sub></sup>*v*<sub>1</sub><sup>−*c*<sub>1</sub></sup>.
-
-Indeed, you then have
-*g*<sup>*r*<sub>1</sub></sup> = *v*<sub>1</sub><sup>*c*<sub>1</sub></sup>*a*<sub>1</sub>
-so that the run is valid.
-
 Non-interactive version
 -----------------------
 
