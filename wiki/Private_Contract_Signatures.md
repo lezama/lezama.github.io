@@ -45,7 +45,7 @@ Standard scheme
 
 A **private contract signature** PCS<sub>*S*</sub>(*m*, *n*) is
 
-NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>))(*m*)
  with s random. Intuitively:
 
 -   It constitutes a proof that one of the Pi has passed the Schnorr
@@ -59,7 +59,7 @@ NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</s
 
 A **private contract signature revealer** RPCS<sub>*i*</sub>(*n*) is
 
-NI(CCE<sup>*T*</sup>(*i*,*n*)∨CCD<sup>*T*</sup>(*i*,*n*))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(CCE<sup>*T*</sup>(*i*,*n*)∨CCD<sup>*T*</sup>(*i*,*n*))(*m*)
  with s random. Intuitively:
 
 -   It constitutes a proof that the cyphertext *n* has content the
