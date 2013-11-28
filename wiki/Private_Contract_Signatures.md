@@ -52,7 +52,8 @@ NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</s
     identification test on challenge *H*(*g*<sup>*s*</sup>, *m*).
 -   This amounts to having signed *m*, just like in the Schnorr
     signature scheme.
--   But we do not knot, yet, which of the *P*<sub>*i*</sub> has signed.
+-   Except that we do not know, yet, which of the *P*<sub>*i*</sub>
+    has signed.
 
 Simplified scheme (Failed attempt)
 ----------------------------------
