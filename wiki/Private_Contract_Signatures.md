@@ -93,7 +93,7 @@ weaknesses, however:
     *g*<sup>Priv<sub>*P*<sub>*i*</sub></sub>Priv<sub>*T*</sub></sup>,
     and so the next time Pi is immediately identified as the creator of
     the SPCS.
--   Worse even, Pi's signature, once it has been used once,can then be
+-   Worse even, Pi's signature, once it has been used once, can then be
     forged, since signing amounts to multiply by
     *g*<sup>Priv<sub>*P*<sub>*i*</sub></sub>Priv<sub>*T*</sub></sup> in
     this scheme.
