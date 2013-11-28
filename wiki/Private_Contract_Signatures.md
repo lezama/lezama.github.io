@@ -54,6 +54,8 @@ NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</s
     signature scheme.
 -   Except that we do not know, yet, which of the *P*<sub>*i*</sub>
     has signed.
+-   In order to convert this into a signature by *P*<sub>*i*</sub>, one
+    must prove that the cyphertext *n* has content the integer *i*.
 
 Simplified scheme (Failed attempt)
 ----------------------------------
