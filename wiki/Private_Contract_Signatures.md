@@ -59,7 +59,7 @@ NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</s
 
 A **private contract signature revealer** RPCS<sub>*i*</sub>(*n*) is
 
-NI(CCE<sup>*T*</sup>(*i*,*n*)∧CCD<sup>*T*</sup>(*i*,*n*))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(CCE<sup>*T*</sup>(*i*,*n*)∨CCD<sup>*T*</sup>(*i*,*n*))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random. Intuitively:
 
 -   It constitutes a proof that the cyphertext *n* has content the
