@@ -43,7 +43,7 @@ composable, interactive zero-knowledge proof schemes.
 Standard scheme
 ---------------
 
-Normally, a PCS<sub>*S*</sub>(*m*) is
+A PCS<sub>*S*</sub>(*m*) is
 
 NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>)(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random.
