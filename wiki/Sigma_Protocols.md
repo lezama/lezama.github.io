@@ -254,7 +254,7 @@ was an easy challenge that he has himself chosen.
 composition of two protocols P and Q, under the divided up mask a and
 challenge c.**
 
-**Simulators**
+**Simulators:**
 
 In the case of Schnorr<sub>*B*</sub>, there exists a simulator, so that
 this can be done. Indeed, to generate
