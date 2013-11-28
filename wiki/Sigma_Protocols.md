@@ -91,7 +91,7 @@ the group *Z*<sub>*p*</sub>.
 
 The protocol has three rounds:
 
-*B* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*h*<sup>*s*′</sup>
+*B* → *A* : *a* = *g*<sup>*s*</sup>, *a*′=*h*<sup>*s*</sup>
 
 *A* → *B* : *c*
 
