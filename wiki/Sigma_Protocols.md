@@ -150,7 +150,7 @@ he can generate valid triplets through the following simulator:
 
 -   Pick *c*, *r*.
 -   Let *a* = *g*<sup>*r*</sup>*u*<sup>−*c*</sup> and
-    *a*′=*g*<sup>*x*</sup><sup>*r*</sup>*v*/*m*<sup>−*c*</sup>.
+    *a*′=*g*<sup>*x*</sup><sup>*r*</sup>(*v*/*m*)<sup>−*c*</sup>.
 
 Indeed, you then have *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and
 *g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′ so that
