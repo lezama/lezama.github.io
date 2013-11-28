@@ -40,6 +40,14 @@ encryption and signature schemes.
 Outline of [Sigma protocols](/wiki/Sigma_Protocols "wikilink"), which are
 composable, interactive zero-knowledge proof schemes.
 
+Standard scheme
+---------------
+
+Normally, a PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
+
+NI((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*)∧Schnorr<sub>*A*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+ with s random.
+
 Simplified scheme (Failed attempt)
 ----------------------------------
 
@@ -98,20 +106,9 @@ weaknesses, however:
     *g*<sup>Priv<sub>*P*<sub>*i*</sub></sub>Priv<sub>*T*</sub></sup> in
     this scheme.
 
-Standard scheme
----------------
-
-Normally, a PCS<sub>*B*</sub><sup>*A*</sup>(*m*) is
-
-NI((CCE<sup>*T*</sup>(0,*n*)∧Schnorr<sub>*B*</sub>)∨(CCE<sup>*T*</sup>(1,*n*)∧Schnorr<sub>*A*</sub>))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
- with s random.
-
 To do
 -----
 
 Check duplication of a and c in and and or constructs.
-
-Check whether non-interactive CCE under ephemeral key PubB and challenge
-m is an established way of signing.
 
 Give simulators for CCE and CCT.
