@@ -45,7 +45,7 @@ Standard scheme
 
 Normally, a PCS<sub>*S*</sub>(*m*) is
 
-NI(⋁<sub>*i* ∈ *S*</sub>CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>(*g*<sup>*s*</sup>,*H*(*g*<sup>*s*</sup>,*m*))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
+NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>(*g*<sup>*s*</sup>,*H*(*g*<sup>*s*</sup>,*m*)))(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
  with s random.
 
 Simplified scheme (Failed attempt)
