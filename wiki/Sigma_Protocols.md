@@ -145,6 +145,17 @@ if Bob was honest it should be that
 response of this protocol, done towards T with mask a and under
 challenge c.**
 
+Beware that B must not be left to freely choose the challenge, otherwise
+he can generate valid triplets through the following simulator:
+
+-   Pick *c*, *r*.
+-   Let *a* = *g*<sup>*r*</sup>*u*<sup>−*c*</sup> and
+    *a*′=*g*<sup>*x*</sup><sup>*r*</sup>*v*/*m*<sup>−*c*</sup>.
+
+Indeed, you then have *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and
+*g*<sup>*x*</sup><sup>*r*</sup> = *v*/*m*<sup>*c*</sup>*a* so that the
+run is valid.
+
 **Ex. 4: Proof of cyphertext content by decrypter**
 
 Fix *g* and *h* = *g*<sup>*x*</sup> = Pub<sup>*T*</sup> integers.
