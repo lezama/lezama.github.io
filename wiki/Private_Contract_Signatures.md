@@ -49,7 +49,8 @@ NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</s
  Intuitively:
 
 -   It constitutes a proof that one of the Pi has passed the Schnorr
-    identification test on challenge *H*(*g*<sup>*s*</sup>, *m*).
+    identification test on challenge
+    *H*(*g*<sub>*i*</sub><sup>*s*<sub>*i*</sub></sup>, *m*).
 -   This amounts to having signed *m*, just like in the Schnorr
     signature scheme.
 -   Except that we do not know, yet, which of the *P*<sub>*i*</sub>
@@ -72,7 +73,8 @@ A **contract signature** SIG<sub>*i*</sub>(*m*) is
  Intuitively:
 
 -   It constitutes a combined proof that Pi has passed the Schnorr
-    identification test on challenge *H*(*g*<sup>*s*</sup>, *m*).
+    identification test on challenge
+    *H*(*g*<sub>*i*</sub><sup>*s*<sub>*i*</sub></sup>, *m*).
 -   This amounts to having signed *m*, just like in the Schnorr
     signature scheme.
 
