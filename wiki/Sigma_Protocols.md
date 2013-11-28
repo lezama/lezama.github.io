@@ -222,7 +222,7 @@ protocols is referred to as "existence of a simulator" or "special
 honest-verifier zero-knowledge". Here is how.
 
 -   Public input *v*<sub>0</sub>, *v*<sub>1</sub>.
--   Agreed relation *R*<sub>0</sub> ∧ *R*<sub>1</sub>.
+-   Agreed relation *R*<sub>0</sub> ∨ *R*<sub>1</sub>.
 -   Private input *w*<sub>0</sub>, say, but could equally be
     *w*<sub>1</sub>.
 -   Bob will need some random
