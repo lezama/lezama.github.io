@@ -46,7 +46,13 @@ Standard scheme
 A PCS<sub>*S*</sub>(*m*) is
 
 NI(⋁<sub>*i* ∈ *S*</sub>(CCE<sup>*T*</sup>(*i*,*n*)∧Schnorr<sub>*i*</sub>)(*g*<sup>*s*</sup>, *H*(*g*<sup>*s*</sup>, *m*))
- with s random.
+ with s random. Intuitively:
+
+-   It constitutes a proof that one of the Pi has passed the Schnorr
+    identification test on challenge *H*(*g*<sup>*s*</sup>, *m*).
+-   This amounts to having signed *m*, just like in the Schnorr
+    signature scheme.
+-   But we do not knot, yet, which of the *P*<sub>*i*</sub> has signed.
 
 Simplified scheme (Failed attempt)
 ----------------------------------
