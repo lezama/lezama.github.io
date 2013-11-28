@@ -112,7 +112,7 @@ he can generate valid triplets through the following simulator:
     *a*′=*h*<sup>*r*</sup>*v*<sup>−*c*</sup>.
 
 Indeed, you then have *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and
-*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a* so that the run is valid.
+*h*<sup>*r*</sup> = *v*<sup>*c*</sup>*a*′ so that the run is valid.
 
 **Ex. 3: Proof of cyphertext content by encrypter**
 
@@ -153,8 +153,8 @@ he can generate valid triplets through the following simulator:
     *a*′=*g*<sup>*x*</sup><sup>*r*</sup>*v*/*m*<sup>−*c*</sup>.
 
 Indeed, you then have *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and
-*g*<sup>*x*</sup><sup>*r*</sup> = *v*/*m*<sup>*c*</sup>*a* so that the
-run is valid.
+*g*<sup>*x*</sup><sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′ so that
+the run is valid.
 
 **Ex. 4: Proof of cyphertext content by decrypter**
 
