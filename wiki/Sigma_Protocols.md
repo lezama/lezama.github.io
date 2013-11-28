@@ -32,8 +32,8 @@ valid. This explains what the last two rounds are for. The first round
 is there out of technical necessity: Bob chooses this *a* as a mask for
 passing the challenge without disclosing *w*.
 
-Examples
---------
+Toolbox
+-------
 
 Here are examples of Sigma protocols based on the hardness of Discrete
 Logarithms. Fix *p* a prime and *g* an integer. The powers of *g* form a
@@ -188,6 +188,17 @@ honest it should be that
 **Denote by (*a*, *c*)↦CCD<sup>*T*</sup>(*m*, *n*)(*a*, *c*) the
 response of this protocol, done towards T with mask a and under
 challenge c.**
+
+Beware that B must not be left to freely choose the challenge, otherwise
+he can generate valid triplets through the following simulator:
+
+-   Pick *c*, *r*.
+-   Let *a* = *g*<sup>*r*</sup>*u*<sup>−*c*</sup> and
+    *a*′=*u*<sup>*r*</sup>(*v*/*m*)<sup>−*c*</sup>.
+
+Indeed, you then have *g*<sup>*r*</sup> = *u*<sup>*c*</sup>*a* and
+*u*<sup>*r*</sup> = (*v*/*m*)<sup>*c*</sup>*a*′ so that the run is
+valid.
 
 Composability
 -------------
